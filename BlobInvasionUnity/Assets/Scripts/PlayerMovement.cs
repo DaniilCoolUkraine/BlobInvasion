@@ -7,37 +7,16 @@ namespace BlobInvasion
         [SerializeField] private FloatingJoystick _joystick;
         [SerializeField] private float _speed;
 
-        //code style _
-        private Rigidbody rb;
-
-        //remove fields
-        private float _inputY;
-        private float _inputX;
-
-        //GetComponent change to [SerializeField]
-        private void Start()
-        {
-            rb = GetComponent<Rigidbody>();
-        }
-
-        //remove Update
-        private void Update()
-        {
-            //remove fields
-            _inputX = _joystick.Horizontal;
-            _inputY = _joystick.Vertical;
-        }
+        [SerializeField] private Rigidbody _rb;
 
         private void FixedUpdate()
         {
-            var _direction = new Vector3(_inputX, 0, _inputY).normalized;
-
-            //move down to if
-            rb.velocity = _direction * _speed;
+            var _direction = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical).normalized;
 
             if (_direction != Vector3.zero)
             {
                 transform.forward = _direction;
+                _rb.velocity = _direction * _speed;
             }
         }
     }

@@ -1489,8 +1489,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777174661}
-  - component: {fileID: 1777174663}
   - component: {fileID: 1777174664}
+  - component: {fileID: 1777174663}
   - component: {fileID: 1777174662}
   m_Layer: 0
   m_Name: Player
@@ -1529,6 +1529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joystick: {fileID: 1951584964}
   _speed: 6
+  _rb: {fileID: 1777174663}
 --- !u!54 &1777174663
 Rigidbody:
   m_ObjectHideFlags: 0
