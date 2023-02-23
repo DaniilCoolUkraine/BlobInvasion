@@ -5,13 +5,13 @@ namespace BlobInvasion
 {
     public class PlayerMovement : MonoBehaviour
     {
+        public event Action<Animator, bool> OnPlayerMove;
+
         [SerializeField] private FloatingJoystick _joystick;
         [SerializeField] private float _speed;
         [SerializeField] private Rigidbody _rb;
 
         [SerializeField] private Animator _animator;
-        
-        public event Action<Animator, bool> OnPlayerMove;
 
         private bool _isWalking = false;
 
@@ -26,6 +26,7 @@ namespace BlobInvasion
 
                 if (!_isWalking)
                 {
+                    //move to function
                     _isWalking = true;
                     OnPlayerMove?.Invoke(_animator, _isWalking);
                 }
@@ -33,6 +34,8 @@ namespace BlobInvasion
             else
             {
                 //Invoke this each frame when player simply standing. todo might be optimized
+                //add if(_isWalking))
+                //move to function
                 _isWalking = false;
                 OnPlayerMove?.Invoke(_animator, _isWalking);
             }

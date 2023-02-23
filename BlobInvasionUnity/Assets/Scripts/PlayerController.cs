@@ -5,6 +5,7 @@ namespace BlobInvasion
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private PlayerMovement _player;
+        //change manager to controller
         [SerializeField] private PlayerAnimationManager _animationManager;
 
         private void OnEnable()
