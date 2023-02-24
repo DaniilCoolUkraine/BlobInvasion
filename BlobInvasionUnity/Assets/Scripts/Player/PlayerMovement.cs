@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace BlobInvasion
+namespace BlobInvasion.Player
 {
     public class PlayerMovement : MonoBehaviour
     {

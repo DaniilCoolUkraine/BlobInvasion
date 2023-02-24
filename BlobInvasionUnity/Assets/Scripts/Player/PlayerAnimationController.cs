@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BlobInvasion
+namespace BlobInvasion.Player
 {
     public class PlayerAnimationController : MonoBehaviour
     {
