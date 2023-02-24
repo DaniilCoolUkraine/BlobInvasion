@@ -14,30 +14,32 @@ namespace BlobInvasion
         [SerializeField] private Animator _animator;
 
         private bool _isWalking = false;
+        private bool IsWalking
+        {
+            get => _isWalking;
+            set
+            {
+                _isWalking = value;
+                OnPlayerMove?.Invoke(_animator, _isWalking);
+            }
+        }
 
         private void FixedUpdate()
         {
             var _direction = new Vector3(_joystick.Horizontal, 0, _joystick.Vertical).normalized;
 
-            if (_direction != Vector3.zero)
+            if (_direction == Vector3.zero)
+            {
+                if(IsWalking)
+                    IsWalking = false;
+            }
+            else
             {
                 transform.forward = _direction;
                 _rb.velocity = _direction * _speed;
 
-                if (!_isWalking)
-                {
-                    //move to function
-                    _isWalking = true;
-                    OnPlayerMove?.Invoke(_animator, _isWalking);
-                }
-            }
-            else
-            {
-                //Invoke this each frame when player simply standing. todo might be optimized
-                //add if(_isWalking))
-                //move to function
-                _isWalking = false;
-                OnPlayerMove?.Invoke(_animator, _isWalking);
+                if (!IsWalking)
+                    IsWalking = true;
             }
         }
     }
