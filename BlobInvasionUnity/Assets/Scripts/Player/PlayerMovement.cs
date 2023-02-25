@@ -5,13 +5,11 @@ namespace BlobInvasion.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
-        public event Action<Animator, bool> OnPlayerMove;
+        public event Action<bool> OnPlayerMove;
 
         [SerializeField] private FloatingJoystick _joystick;
         [SerializeField] private float _speed;
         [SerializeField] private Rigidbody _rb;
-
-        [SerializeField] private Animator _animator;
 
         private bool _isWalking = false;
         private bool IsWalking
@@ -20,7 +18,7 @@ namespace BlobInvasion.Player
             set
             {
                 _isWalking = value;
-                OnPlayerMove?.Invoke(_animator, _isWalking);
+                OnPlayerMove?.Invoke(_isWalking);
             }
         }
 

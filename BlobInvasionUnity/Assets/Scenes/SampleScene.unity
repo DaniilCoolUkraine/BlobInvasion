@@ -1533,7 +1533,6 @@ MonoBehaviour:
   _joystick: {fileID: 1951584964}
   _speed: 6
   _rb: {fileID: 1777174663}
-  _animator: {fileID: 2090848511}
 --- !u!54 &1777174663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1576,6 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a0678330f94a48b210d81f758f2b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 2090848511}
 --- !u!114 &1777174666
 MonoBehaviour:
   m_ObjectHideFlags: 0

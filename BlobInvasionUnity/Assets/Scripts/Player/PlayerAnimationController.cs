@@ -4,11 +4,13 @@ namespace BlobInvasion.Player
 {
     public class PlayerAnimationController : MonoBehaviour
     {
+        [SerializeField] private Animator _animator;
+        
         private string _isRunningParameter = "isRunning";
         
-        public void PlayMovementAnimation(Animator animator, bool isRunning)
+        public void PlayMovementAnimation(bool isRunning)
         {
-            animator.SetBool(_isRunningParameter, isRunning);
+            _animator.SetBool(_isRunningParameter, isRunning);
         }
     }
 }
