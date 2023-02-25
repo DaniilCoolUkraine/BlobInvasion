@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BlobInvasion.Items.Weapons.RangedWeapons
+namespace BlobInvasion.Items.Weapons
 {
     public abstract class RangedWeapon: Weapon
     {

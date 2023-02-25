@@ -1,4 +1,4 @@
-﻿namespace BlobInvasion.Items.Weapons.RangedWeapons
+﻿namespace BlobInvasion.Items.Weapons
 {
     public class ThrowingAxe: RangedWeapon
     {

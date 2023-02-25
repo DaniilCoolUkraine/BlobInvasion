@@ -1,4 +1,4 @@
-﻿namespace BlobInvasion.Items.Weapons.MeleeWeapons
+﻿namespace BlobInvasion.Items.Weapons
 {
     public class BattleAxe: MeleeWeapon
     {

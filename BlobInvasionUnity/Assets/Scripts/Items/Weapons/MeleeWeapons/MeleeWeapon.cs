@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BlobInvasion.Items.Weapons.MeleeWeapons
+namespace BlobInvasion.Items.Weapons
 {
     public abstract class MeleeWeapon: Weapon
     {
