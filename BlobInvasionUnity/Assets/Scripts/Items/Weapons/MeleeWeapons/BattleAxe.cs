@@ -2,6 +2,6 @@
 {
     public class BattleAxe: MeleeWeapon
     {
-        
+        //todo override Attack
     }
 }

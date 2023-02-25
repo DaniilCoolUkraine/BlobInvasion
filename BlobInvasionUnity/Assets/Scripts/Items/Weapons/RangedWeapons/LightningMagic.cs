@@ -2,6 +2,6 @@
 {
     public class LightningMagic: RangedWeapon
     {
-        
+        //todo override Attack
     }
 }

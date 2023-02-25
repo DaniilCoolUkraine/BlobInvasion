@@ -2,6 +2,6 @@
 {
     public class Sword: MeleeWeapon
     {
-        
+        //todo override Attack
     }
 }
