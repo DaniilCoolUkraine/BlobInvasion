@@ -8,7 +8,7 @@ namespace BlobInvasion.Player
     {
         public event Action<bool> OnAttack;
 
-        [SerializeField] private CollisionDetector _collisionDetector;
+        [SerializeField] private CollisionDetectorEnemy _collisionDetector;
 
         private Weapon _weapon;
         private int _additionalDamage;
