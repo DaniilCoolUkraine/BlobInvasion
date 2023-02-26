@@ -8,14 +8,17 @@ namespace BlobInvasion.Player
     {
         public event Action<bool> OnAttack;
 
-        [SerializeField] private CollisionDetectorEnemy _collisionDetector;
-
-        private Weapon _weapon;
+        [SerializeField] private SphereCollider _attackZone;
+        // todo unserialize weapon
+        [SerializeField] private Weapon _weapon;
         private int _additionalDamage;
 
-        //todo Attack should start not on click
-        //todo Attack should start on enemy enter player trigger zone
-        //todo attack should be automatic
+        // todo delete start
+        private void Start()
+        {
+            _attackZone.radius = _weapon.AttackZoneRadius;
+        }
+
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
@@ -25,13 +28,14 @@ namespace BlobInvasion.Player
         public void SetWeapon(Weapon weapon)
         {
             _weapon = weapon;
+            _attackZone.radius = _weapon.AttackZoneRadius;
         }
 
         public void SetAdditionalDamage(int additionalDamage)
         {
             _additionalDamage = additionalDamage;
         }
-        
+
         private void Attack()
         {
             //todo here we should call something like _weapon.Attack(additionalDamage);

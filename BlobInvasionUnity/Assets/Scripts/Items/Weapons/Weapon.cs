@@ -7,6 +7,9 @@ namespace BlobInvasion.Items.Weapons
     {
         [SerializeField] private WeaponDataSO _weaponData;
 
+        public float AttackZoneRadius => _weaponData.AttackRadius;
+        public float AttackCooldown => _weaponData.AttackSpeed;
+        
         public abstract void Attack(int additionalDamage);
     }
 }
