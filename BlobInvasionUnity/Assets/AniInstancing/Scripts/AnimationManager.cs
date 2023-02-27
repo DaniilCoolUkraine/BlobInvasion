@@ -66,11 +66,11 @@ namespace AnimationInstancing
                 return info;
             }
 
-#if UNITY_IPHONE || UNITY_ANDROID
-            Debug.Assert(m_useBundle);
-			if (m_mainBundle == null)
-            	Debug.LogError("You should call LoadAnimationAssetBundle first.");
-#endif
+// #if UNITY_IPHONE || UNITY_ANDROID
+//             Debug.Assert(m_useBundle);
+// 			if (m_mainBundle == null)
+//             	Debug.LogError("You should call LoadAnimationAssetBundle first.");
+// #endif
             if (m_useBundle)
             {
                 CreateAnimationRequest request = new CreateAnimationRequest();
