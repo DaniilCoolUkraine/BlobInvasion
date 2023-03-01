@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BlobInvasion.Player;
+using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
 namespace BlobInvasion.Items.Weapons
@@ -12,11 +13,17 @@ namespace BlobInvasion.Items.Weapons
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                transform.SetParent(_parentBone);
-                transform.localPosition = Vector3.zero;
-                transform.localRotation = Quaternion.identity;
-                _parentConstraint.weight = 1;
+                ParentToAnimation();
+                collision.gameObject.GetComponent<PlayerAttack>().SetWeapon(this.GetComponent<Weapon>());
             }
+        }
+
+        private void ParentToAnimation()
+        {
+            transform.SetParent(_parentBone);
+            transform.localPosition = Vector3.zero;
+            transform.localRotation = Quaternion.identity;
+            _parentConstraint.weight = 1;
         }
     }
 }

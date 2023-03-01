@@ -9,16 +9,10 @@ namespace BlobInvasion.Player
         public event Action<bool> OnAttack;
 
         [SerializeField] private SphereCollider _attackZone;
-        // todo unserialize weapon
-        [SerializeField] private Weapon _weapon;
+       
+        private Weapon _weapon;
         private int _additionalDamage;
-
-        // todo delete start
-        private void Start()
-        {
-            _attackZone.radius = _weapon.AttackZoneRadius;
-        }
-
+        
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
