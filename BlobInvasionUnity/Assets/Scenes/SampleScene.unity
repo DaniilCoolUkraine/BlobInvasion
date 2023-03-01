@@ -1513,6 +1513,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+--- !u!1 &1296240417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1296240418}
+  m_Layer: 0
+  m_Name: LeftHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1296240418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296240417}
+  m_LocalRotation: {x: 0.75652343, y: -0.09347667, z: 0.042668805, w: 0.64584357}
+  m_LocalPosition: {x: -0.00093, y: 0.00052, z: 0.00589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 920357077}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 99.880005, y: 19.113007, z: 30.203003}
 --- !u!4 &1299551998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8118374403075700264, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
@@ -1534,7 +1565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1334978892
 Transform:
   m_ObjectHideFlags: 0
@@ -1835,7 +1866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1777174661
 Transform:
   m_ObjectHideFlags: 0
@@ -1881,7 +1912,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1777174664
 CapsuleCollider:
@@ -2140,7 +2171,7 @@ MonoBehaviour:
     m_SourceObjects:
       m_Length: 1
       m_Item0:
-        transform: {fileID: 920357077}
+        transform: {fileID: 1296240418}
         weight: 1
       m_Item1:
         transform: {fileID: 0}
@@ -2319,7 +2350,15 @@ MonoBehaviour:
   m_RigLayers:
   - m_Rig: {fileID: 498270071}
     m_Active: 1
-  m_Effectors: []
+  m_Effectors:
+  - m_Transform: {fileID: 1296240418}
+    m_Style:
+      shape: {fileID: 4300000, guid: 707439f5f179a460987ecbb96364c8a9, type: 2}
+      color: {r: 0.06358349, g: 1, b: 0, a: 1}
+      size: 0.3
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+    m_Visible: 1
 --- !u!1001 &2128178768
 PrefabInstance:
   m_ObjectHideFlags: 0

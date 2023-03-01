@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BlobInvasion
 {
-    public class CollisionDetectorEnemy : MonoBehaviour
+    public class AttackWeaponDetector : MonoBehaviour
     {
         public event Action<bool> OnDetectEnemy;
 
