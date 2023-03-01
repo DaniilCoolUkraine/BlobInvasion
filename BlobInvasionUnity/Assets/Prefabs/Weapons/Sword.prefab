@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9215919717356872766}
   - component: {fileID: 9215919717356872767}
+  - component: {fileID: 3074807882880201518}
+  - component: {fileID: 9215919717356872764}
   - component: {fileID: 9215919717356872765}
   - component: {fileID: -1551862265372749492}
-  - component: {fileID: 9215919717356872764}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9215919717356872761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.28, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50,6 +51,33 @@ CapsuleCollider:
   m_Height: 1.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &3074807882880201518
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215919717356872761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1.75
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9215919717356872764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215919717356872761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2c6d018ca54f59b4cc07d5632e6ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponData: {fileID: 11400000, guid: 7bd2ebc3c22beb748bd5f2ec02348dea, type: 2}
 --- !u!114 &9215919717356872765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,19 +102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a299a2f3e594d81a1f23bfd5168a550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9215919717356872764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9215919717356872761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd2c6d018ca54f59b4cc07d5632e6ec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weaponData: {fileID: 11400000, guid: 7bd2ebc3c22beb748bd5f2ec02348dea, type: 2}
+  _parentBone: {fileID: 0}
+  _parentConstraint: {fileID: 0}
 --- !u!1001 &9215919718670746562
 PrefabInstance:
   m_ObjectHideFlags: 0
