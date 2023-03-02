@@ -20,6 +20,7 @@ namespace BlobInvasion
 
         private void OnTriggerEnter(Collider other)
         {
+            //need to add check on enemy tag
             _isEnemyNear = true;
             //start coroutine
         }

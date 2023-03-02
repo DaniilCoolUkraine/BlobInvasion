@@ -11,6 +11,7 @@ namespace BlobInvasion.Items.Weapons
         
         private void OnCollisionEnter(Collision collision)
         {
+            //move "Player" to separate Constant class in separate file
             if (collision.gameObject.CompareTag("Player"))
             {
                 ParentToAnimation();
