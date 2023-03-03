@@ -1,7 +1,9 @@
-﻿namespace BlobInvasion.Items.Weapons
+﻿using BlobInvasion.Damageable;
+
+namespace BlobInvasion.Items.Weapons
 {
     public interface IDamager
     {
-        public void Attack(int additionalDamage);
+        public void Attack(IDamageable damageable);
     }
 }

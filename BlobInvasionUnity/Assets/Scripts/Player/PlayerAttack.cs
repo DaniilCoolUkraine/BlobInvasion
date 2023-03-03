@@ -1,4 +1,5 @@
 ﻿using System;
+using BlobInvasion.Damageable;
 using BlobInvasion.Items.Weapons;
 using UnityEngine;
 
@@ -11,28 +12,27 @@ namespace BlobInvasion.Player
         [SerializeField] private SphereCollider _attackZone;
        
         private Weapon _weapon;
-        private int _additionalDamage;
-        
-        private void Update()
+
+        /* todo add check if enemy is near
+            start coroutine onTriggerEnter, 
+            stop coroutine onTriggerStay (if no enemy in trigger left)
+         */
+        private void OnTriggerEnter(Collider other)
         {
-            if (Input.GetMouseButtonDown(0))
+            var _damageble = other.GetComponent<IDamageable>();
+            if (_damageble != null)
                 Attack();
         }
-
+        
         public void SetWeapon(Weapon weapon)
         {
             _weapon = weapon;
             _attackZone.radius = _weapon.AttackZoneRadius;
         }
-
-        public void SetAdditionalDamage(int additionalDamage)
-        {
-            _additionalDamage = additionalDamage;
-        }
-
+        
+        // starts animation
         private void Attack()
         {
-            //todo here we should call something like _weapon.Attack(additionalDamage);
             OnAttack?.Invoke(true);
         }
     }

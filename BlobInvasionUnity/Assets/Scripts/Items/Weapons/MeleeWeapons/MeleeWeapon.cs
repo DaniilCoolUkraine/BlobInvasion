@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+﻿using BlobInvasion.Damageable;
 
 namespace BlobInvasion.Items.Weapons
 {
     public abstract class MeleeWeapon: Weapon
     {
-        public override void Attack(int additionalDamage)
+        public override void Attack(IDamageable damageable)
         {
-            Debug.Log("I'm melee weapon");
+            damageable.TaKeDamage(Damage);
         }
     }
 }
