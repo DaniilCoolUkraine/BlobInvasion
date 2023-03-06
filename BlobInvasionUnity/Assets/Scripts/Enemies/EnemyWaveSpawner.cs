@@ -33,7 +33,10 @@ namespace BlobInvasion
             EnemiesToSpawn.Clear();
 
             GenerateEnemies();
+            //todo replace to "yield return StartCoroutine(CreateEnemiesOnScene());"
+            //it will be wait untill CreateEnemiesOnScene() coroutine is completed
             StartCoroutine(CreateEnemiesOnScene());
+
             yield return new WaitForSeconds(_timeBetweenWaves);
         }
 

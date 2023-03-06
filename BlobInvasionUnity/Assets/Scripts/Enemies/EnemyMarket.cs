@@ -6,6 +6,8 @@ namespace BlobInvasion
     public class EnemyMarket : ScriptableObject
     {
         [SerializeField] private EnemyDataSO[] _enemies;
+        //todo add methood "EnemyDataSO GetEnemy(int index)" to return specific enemy by index
+        //add check of index > 0 && index < _enemies.Lenght
         public EnemyDataSO[] Enemies => _enemies;
     }
 }
