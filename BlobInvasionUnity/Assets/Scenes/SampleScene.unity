@@ -560,6 +560,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9215919717356872767, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
+      propertyPath: m_Height
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215919717356872767, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215919717356872767, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
+      propertyPath: m_Center.y
+      value: 0.49
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
 --- !u!4 &508040815 stripped
@@ -2066,7 +2078,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!136 &1777174664
 CapsuleCollider:
