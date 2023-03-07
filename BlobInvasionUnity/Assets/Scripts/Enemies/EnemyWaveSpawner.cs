@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlobInvasion
+namespace BlobInvasion.Enemies
 {
     public class EnemyWaveSpawner : MonoBehaviour
     {
@@ -17,6 +17,8 @@ namespace BlobInvasion
         private int _currentWave = 1;
         private int _waveWeight;
 
+        private bool _isWavesCreatingNeed = true;
+
         private void Awake()
         {
             EnemiesToSpawn = new List<EnemyDataSO>();
@@ -29,15 +31,18 @@ namespace BlobInvasion
 
         public IEnumerator GenerateWave()
         {
-            _waveWeight = _currentWave * _waveWeightCoefficient;
-            EnemiesToSpawn.Clear();
+            while (_isWavesCreatingNeed)
+            {
+                _waveWeight = _currentWave * _waveWeightCoefficient;
+                EnemiesToSpawn.Clear();
 
-            GenerateEnemies();
-            //todo replace to "yield return StartCoroutine(CreateEnemiesOnScene());"
-            //it will be wait untill CreateEnemiesOnScene() coroutine is completed
-            StartCoroutine(CreateEnemiesOnScene());
-
-            yield return new WaitForSeconds(_timeBetweenWaves);
+                GenerateEnemies();
+                //todo replace to "yield return StartCoroutine(CreateEnemiesOnScene());"
+                //it will be wait untill CreateEnemiesOnScene() coroutine is completed
+                
+                StartCoroutine(CreateEnemiesOnScene());
+                yield return new WaitForSeconds(_timeBetweenWaves);
+            }
         }
 
         private void GenerateEnemies()
