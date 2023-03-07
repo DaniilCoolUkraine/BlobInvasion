@@ -23,6 +23,7 @@ namespace BlobInvasion.Damageable
         private void Die()
         {
             Debug.Log($"{gameObject.name} died");
+            Destroy(gameObject);
         }
     }
 }
