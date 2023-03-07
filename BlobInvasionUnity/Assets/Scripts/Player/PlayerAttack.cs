@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using BlobInvasion.Damageable;
 using BlobInvasion.Items.Weapons;
 using UnityEngine;
@@ -13,15 +15,32 @@ namespace BlobInvasion.Player
        
         private Weapon _weapon;
 
-        /* todo add check if enemy is near
-            start coroutine onTriggerEnter, 
-            stop coroutine onTriggerStay (if no enemy in trigger left)
-         */
-        private void OnTriggerEnter(Collider other)
+        private bool _isAttacking;
+        public bool IsAttacking
         {
-            var _damageble = other.GetComponent<IDamageable>();
-            if (_damageble != null)
-                Attack();
+            get => _isAttacking;
+            set
+            {
+                _isAttacking = value;
+                OnAttack?.Invoke(_isAttacking);
+            }
+        }
+
+        private bool _isEnemyNear;
+        
+        private void OnTriggerStay(Collider other)
+        {
+            // todo to heavy getting component each frame
+            // use some methods to remember enemies, that have been checked
+            var damageable = other.GetComponent<IDamageable>();
+            if (damageable == null)
+            {
+                _isEnemyNear = false;
+                return;
+            }
+
+            _isEnemyNear = true;
+            StartCoroutine(Attack());
         }
         
         public void SetWeapon(Weapon weapon)
@@ -31,9 +50,14 @@ namespace BlobInvasion.Player
         }
         
         // starts animation
-        private void Attack()
+        private IEnumerator Attack()
         {
-            OnAttack?.Invoke(true);
+            while (_isEnemyNear)
+            {
+                IsAttacking = true;
+                yield return new WaitForSeconds(_weapon.AttackCooldown);
+                IsAttacking = false;
+            }
         }
     }
 }
