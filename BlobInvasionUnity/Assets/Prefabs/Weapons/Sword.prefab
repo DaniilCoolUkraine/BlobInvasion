@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215919717356872766}
-  - component: {fileID: 9215919717356872767}
   - component: {fileID: 3074807882880201518}
+  - component: {fileID: 9215919717356872767}
   - component: {fileID: 5951768222921655214}
   - component: {fileID: 9215919717356872764}
   - component: {fileID: 9215919717356872765}
@@ -38,20 +38,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &9215919717356872767
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9215919717356872761}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1.75
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &3074807882880201518
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -66,6 +52,20 @@ CapsuleCollider:
   m_Height: 1.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &9215919717356872767
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215919717356872761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.4
+  m_Height: 1.75
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.49, z: 0}
 --- !u!114 &5951768222921655214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBone: {fileID: 0}
   _parentConstraint: {fileID: 0}
+  _weaponCollider: {fileID: 3074807882880201518}
+  _weaponTrigger: {fileID: 9215919717356872767}
 --- !u!1001 &9215919718670746562
 PrefabInstance:
   m_ObjectHideFlags: 0

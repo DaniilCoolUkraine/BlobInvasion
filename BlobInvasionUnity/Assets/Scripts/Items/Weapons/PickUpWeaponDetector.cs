@@ -9,6 +9,9 @@ namespace BlobInvasion.Items.Weapons
         // todo cannot be set in prefab
         [SerializeField] private Transform _parentBone;
         [SerializeField] private MultiParentConstraint _parentConstraint;
+
+        [SerializeField] private Collider _weaponCollider;
+        [SerializeField] private Collider _weaponTrigger;
         
         private void OnCollisionEnter(Collision collision)
         {
@@ -24,9 +27,13 @@ namespace BlobInvasion.Items.Weapons
         private void ParentToAnimation()
         {
             transform.SetParent(_parentBone);
+            _parentConstraint.weight = 1;
+            
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.identity;
-            _parentConstraint.weight = 1;
+
+            _weaponCollider.enabled = false;
+            _weaponTrigger.enabled = true;
         }
     }
 }

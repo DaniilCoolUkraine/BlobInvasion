@@ -28,9 +28,9 @@ AvatarMask:
   - m_Path: CharacterArmature/Bone/Body/Hips/Abdomen/Torso/Neck
     m_Weight: 1
   - m_Path: CharacterArmature/Bone/Body/Hips/Abdomen/Torso/Neck/Head
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: CharacterArmature/Bone/Body/Hips/Abdomen/Torso/Neck/Head/Head_end
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: CharacterArmature/Bone/Body/Hips/Abdomen/Torso/Shoulder.L
     m_Weight: 1
   - m_Path: CharacterArmature/Bone/Body/Hips/Abdomen/Torso/Shoulder.L/UpperArm.L
