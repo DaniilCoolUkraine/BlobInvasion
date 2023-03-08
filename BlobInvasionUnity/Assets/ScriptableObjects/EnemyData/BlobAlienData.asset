@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d7c63a53354b7fa012222b4ce23d57, type: 3}
-  m_Name: EnemyMarket
+  m_Script: {fileID: 11500000, guid: 62cac711874d4840afef8d59e0148b97, type: 3}
+  m_Name: BlobAlienData
   m_EditorClassIdentifier: 
-  _enemies:
-  - {fileID: 11400000, guid: 68fb634c0869c30478fc4ed2edb3623f, type: 2}
-  - {fileID: 11400000, guid: dbdca3920fbe2fd479af3a4f8c5cb6e1, type: 2}
+  _enemyPrefab: {fileID: 4422092530760899161, guid: 8df01577d5d5aa54eb17cfa7adc35d92, type: 3}
+  _enemyWeight: 1

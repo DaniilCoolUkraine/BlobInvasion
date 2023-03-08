@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4256095820
+CRC: 3451377242
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 327369e4112e50666dc779f3611d1484
+    Hash: 4fd5e5b3ca3db82bdc57432d86c98fe6
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ad585dd02dfb5016c0dad519eab8f49
@@ -13,5 +13,7 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/AnimationTexture/Cactoro.bytes
+- Assets/AnimationTexture/Birb.bytes
 - Assets/AnimationTexture/Alien.bytes
 Dependencies: []

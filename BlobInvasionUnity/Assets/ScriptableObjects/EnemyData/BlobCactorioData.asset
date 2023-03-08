@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62cac711874d4840afef8d59e0148b97, type: 3}
-  m_Name: CactorioBlobData
+  m_Name: BlobCactorioData
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 919132149155446097, guid: bb3e049bae4f41b4d9cc950273a68488, type: 3}
-  _enemyWeight: 3
+  _enemyPrefab: {fileID: 5047668449138680732, guid: 6fa7d5ffb5868c049b33ceb3668e89f5, type: 3}
+  _enemyWeight: 5
