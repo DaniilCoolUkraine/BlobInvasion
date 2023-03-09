@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEditor.Animations;
+using UnityEngine;
 
 namespace BlobInvasion.Player
 {
@@ -6,10 +8,17 @@ namespace BlobInvasion.Player
     {
         [Tooltip("Animator component from child model")]
         [SerializeField] private Animator _animator;
+
+        private int _attackLayerIndex;
         
         private string _isRunningParameter = "isRunning";
         private string _isAttackingParameter = "isAttacking";
-        
+
+        private void Awake()
+        {
+            _attackLayerIndex = _animator.GetLayerIndex("TopBody");
+        }
+
         public void PlayMovementAnimation(bool isRunning)
         {
             _animator.SetBool(_isRunningParameter, isRunning);
@@ -17,8 +26,16 @@ namespace BlobInvasion.Player
         
         public void PlayAttackAnimation(bool isAttacking)
         {
-            //todo reset attacking state to false
             _animator.SetBool(_isAttackingParameter, isAttacking);
+            
+            _animator.SetLayerWeight(_attackLayerIndex, WeightFromBool(isAttacking));
+        }
+
+        private int WeightFromBool(bool state)
+        {
+            if (state)
+                return 1;
+            return 0;
         }
     }
 }

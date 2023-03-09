@@ -54,6 +54,7 @@ namespace BlobInvasion.Player
             while (_isEnemyNear)
             {
                 IsAttacking = true;
+                // todo replace with animation time (but how?)
                 yield return new WaitForSeconds(_weapon.AttackCooldown);
                 IsAttacking = false;
             }
