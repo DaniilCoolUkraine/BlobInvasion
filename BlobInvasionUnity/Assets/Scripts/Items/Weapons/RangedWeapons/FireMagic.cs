@@ -2,6 +2,6 @@
 {
     public class FireMagic: RangedWeapon
     {
-        //todo override Attack
+        
     }
 }

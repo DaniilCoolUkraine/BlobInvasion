@@ -2,6 +2,6 @@
 {
     public class ThrowingAxe: RangedWeapon
     {
-        //todo override Attack
+     
     }
 }
