@@ -6,7 +6,7 @@ namespace BlobInvasion.Items.Weapons
 {
     public class PickUpWeaponDetector : MonoBehaviour
     {
-        // todo cannot be set in prefab
+        // todo cannot be set in prefab (not sure how to fix)
         [SerializeField] private Transform _parentBone;
         [SerializeField] private MultiParentConstraint _parentConstraint;
 
@@ -15,11 +15,11 @@ namespace BlobInvasion.Items.Weapons
         
         private void OnCollisionEnter(Collision collision)
         {
-            // todo move "Player" to separate Constant class in separate file
+            // todo move "Player" to separate Constant class in separate file (ask about it)
             if (collision.gameObject.CompareTag("Player"))
             {
                 ParentToAnimation();
-                // todo get rid of GetComponent
+                // todo get rid of GetComponent (not sure how)
                 collision.gameObject.GetComponent<PlayerAttack>().SetWeapon(this.GetComponent<Weapon>());
             }
         }

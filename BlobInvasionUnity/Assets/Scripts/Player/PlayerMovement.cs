@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace BlobInvasion.Player
 {
+    // todo replace it with new script (ask about it)
     public class PlayerMovement : MonoBehaviour
     {
         public event Action<bool> OnPlayerMove;

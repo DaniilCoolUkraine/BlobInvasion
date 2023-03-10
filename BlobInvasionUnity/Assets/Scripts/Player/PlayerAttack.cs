@@ -30,7 +30,7 @@ namespace BlobInvasion.Player
         private void OnTriggerStay(Collider other)
         {
             // todo to heavy getting component each frame
-            // use some methods to remember enemies, that have been checked
+            // use some methods to remember enemies, that have been checked (not sure how)
             var damageable = other.GetComponent<IDamageable>();
             if (damageable == null)
             {

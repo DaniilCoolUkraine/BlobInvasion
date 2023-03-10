@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordData
   m_EditorClassIdentifier: 
   _damage: 1
-  _attackSpeed: 3
+  _attackSpeed: 1.8
   _attackRadius: 2

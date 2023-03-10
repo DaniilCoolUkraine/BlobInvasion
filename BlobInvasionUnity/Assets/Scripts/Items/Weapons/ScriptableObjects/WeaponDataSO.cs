@@ -5,7 +5,7 @@ namespace BlobInvasion.Items.Weapons.ScriptableObjects
     [CreateAssetMenu(fileName = "NewWeapon", menuName = "WeaponData", order = 0)]
     public class WeaponDataSO : ScriptableObject
     {
-        //todo add "additional damage" system 
+        //todo add "additional damage" system (have no idea)
 
         [SerializeField] private int _damage;
         [SerializeField] private float _attackSpeed;
