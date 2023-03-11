@@ -15,16 +15,18 @@ namespace BlobInvasion.Enemies
         {
             if (_player == null)
             {
-                Debug.Log("a");
                 _player = GameObject.FindWithTag("Player").transform;
             }
         }
 
         private void FixedUpdate()
         {
-            transform.position =
-                Vector3.MoveTowards(transform.position, _player.position, _speed * Time.fixedDeltaTime);
-            transform.LookAt(_player);
+            if (_player != null)
+            {
+                transform.position =
+                    Vector3.MoveTowards(transform.position, _player.position, _speed * Time.fixedDeltaTime);
+                transform.LookAt(_player);
+            }
         }
     }
 }
