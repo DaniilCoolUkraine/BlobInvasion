@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5047668449138680734}
   - component: {fileID: 5047668449138680733}
   - component: {fileID: 8510445569408423038}
-  - component: {fileID: -7452956539190365270}
   - component: {fileID: -6104063019737238716}
-  m_Layer: 0
+  - component: {fileID: -4973866134143586305}
+  m_Layer: 6
   m_Name: BlobCactorio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,19 +79,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHp: 5
---- !u!114 &-7452956539190365270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5047668449138680732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1338ba0f20794fa7ac530b88291b2f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 0
 --- !u!114 &-6104063019737238716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +92,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 1
+--- !u!114 &-4973866134143586305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047668449138680732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad00129e38ad4bab8d31142d6fe3cb04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5047668448044695596
 PrefabInstance:
   m_ObjectHideFlags: 0
