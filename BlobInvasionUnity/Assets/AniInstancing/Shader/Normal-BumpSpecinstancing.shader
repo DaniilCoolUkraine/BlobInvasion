@@ -11,6 +11,9 @@ Properties {
 
 CGINCLUDE
 
+#include <HLSLSupport.cginc>
+#include <Lighting.cginc>
+
 #include "AnimationInstancingBase.cginc"
 
 sampler2D _MainTex;
@@ -46,14 +49,14 @@ SubShader {
 	ENDCG
 }
 //
-//SubShader { 
-//	Tags { "RenderType"="Opaque" }
-//	LOD 400
-//	
-//	CGPROGRAM
-//	#pragma surface surf BlinnPhong nodynlightmap
-//	ENDCG
-//}
+SubShader { 
+	Tags { "RenderType"="Opaque" }
+	LOD 400
+	
+	CGPROGRAM
+	#pragma surface surf BlinnPhong nodynlightmap
+	ENDCG
+}
 
-//FallBack "Legacy Shaders/Specular"
+FallBack "Legacy Shaders/Specular"
 }
