@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BlobInvasion.Enemies
+namespace BlobInvasion.Enemies.Spawner
 {
     [CreateAssetMenu(fileName = "NewEnemyMarket", menuName = "EnemyMarket", order = 1)]
     public class EnemyMarket : ScriptableObject

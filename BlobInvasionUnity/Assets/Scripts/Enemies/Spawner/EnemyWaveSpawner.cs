@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace BlobInvasion.Enemies
+namespace BlobInvasion.Enemies.Spawner
 {
     public class EnemyWaveSpawner : MonoBehaviour
     {
