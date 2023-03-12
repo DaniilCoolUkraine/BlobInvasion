@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a299a2f3e594d81a1f23bfd5168a550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _weapon: {fileID: 9215919717356872764}
   _parentBone: {fileID: 0}
   _parentConstraint: {fileID: 0}
   _weaponCollider: {fileID: 3074807882880201518}

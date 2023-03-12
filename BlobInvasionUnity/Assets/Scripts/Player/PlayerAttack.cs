@@ -41,8 +41,6 @@ namespace BlobInvasion.Player
             IsAttacking = true;
 
             _enemyNearCounter++;
-            
-            Debug.Log($"{other.gameObject.name} entered");
         }
         
         private void OnTriggerExit(Collider other)
@@ -55,14 +53,10 @@ namespace BlobInvasion.Player
             }
             
             StopAttack();
-            
-            Debug.Log($"{other.gameObject.name} left");
         }
 
         private void StopAttack()
         {
-            Debug.Log($"{_enemyNearCounter} enemies left");
-            
             _enemyNearCounter = (_enemyNearCounter - 1 < 0) ? 0 :  _enemyNearCounter - 1;
             if (_enemyNearCounter == 0)
             {
