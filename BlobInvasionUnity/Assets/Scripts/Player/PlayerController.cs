@@ -4,7 +4,7 @@ namespace BlobInvasion.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private PlayerMovement _playerMovement;
+        [SerializeField] private MoveByPhysicsJoysticController _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
         public PlayerAttack PlayerAttack => _playerAttack;
         

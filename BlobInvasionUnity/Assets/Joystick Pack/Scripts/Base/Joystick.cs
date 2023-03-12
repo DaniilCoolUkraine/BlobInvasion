@@ -1,13 +1,23 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
+    public Action<bool> OnInterract;
     public float Horizontal { get { return (snapX) ? SnapFloat(input.x, AxisOptions.Horizontal) : input.x; } }
     public float Vertical { get { return (snapY) ? SnapFloat(input.y, AxisOptions.Vertical) : input.y; } }
     public Vector2 Direction { get { return new Vector2(Horizontal, Vertical); } }
+
+    public bool IsDirectionNotZero
+    {
+        get
+        {
+            return _isMoveJoystick && (Mathf.Abs(Horizontal) > 0.01f || Mathf.Abs(Vertical) > 0.01f);
+        }
+    }
 
     public float HandleRange
     {
@@ -39,6 +49,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     private Camera cam;
 
     private Vector2 input = Vector2.zero;
+    private Vector2 _firstPress = Vector2.zero;
+    private bool _isMoveJoystick = false;
 
     protected virtual void Start()
     {
@@ -59,11 +71,19 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
+        _firstPress = eventData.position;
+        _isMoveJoystick = false;
+
         OnDrag(eventData);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (eventData.position != _firstPress)
+        {
+            _isMoveJoystick = true;
+        }
+
         cam = null;
         if (canvas.renderMode == RenderMode.ScreenSpaceCamera)
             cam = canvas.worldCamera;
@@ -74,6 +94,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         FormatInput();
         HandleInput(input.magnitude, input.normalized, radius, cam);
         handle.anchoredPosition = input * radius * handleRange;
+        OnInterract?.Invoke(true);
     }
 
     protected virtual void HandleInput(float magnitude, Vector2 normalised, Vector2 radius, Camera cam)
@@ -131,6 +152,12 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     public virtual void OnPointerUp(PointerEventData eventData)
     {
+        Deactivate();
+    }
+
+    public void Deactivate()
+    {
+        OnInterract?.Invoke(false);
         input = Vector2.zero;
         handle.anchoredPosition = Vector2.zero;
     }

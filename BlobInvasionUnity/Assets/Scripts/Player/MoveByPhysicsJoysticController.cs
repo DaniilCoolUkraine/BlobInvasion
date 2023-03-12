@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,6 +6,8 @@ namespace BlobInvasion.Player
 {
     public class MoveByPhysicsJoysticController : MonoBehaviour
     {
+        public event Action<bool> OnPlayerMove;
+
         [SerializeField] private float _speed;
         [SerializeField] private bool _isMove = true;
         [SerializeField] private bool _isRotation = true;
@@ -24,15 +27,15 @@ namespace BlobInvasion.Player
         public bool IsRotation { get => _isRotation; set => _isRotation = value; }
         public float Speed { set { _speed = value; } }
 
-        // protected virtual void OnEnable()
-        // {
-        //     _joystick.OnInterract += SetActive;
-        // }
-        //
-        // protected virtual void OnDisable()
-        // {
-        //     _joystick.OnInterract -= SetActive;
-        // }
+        protected virtual void OnEnable()
+        {
+             _joystick.OnInterract += SetActive;
+        }
+        
+        protected virtual void OnDisable()
+        {
+             _joystick.OnInterract -= SetActive;
+        }
 
         protected virtual void SetActive(bool isActive)
         {
@@ -57,10 +60,12 @@ namespace BlobInvasion.Player
             if (isActive)
             {
                 _moveCoroutine = StartCoroutine(MoveCoroutine());
+                OnPlayerMove?.Invoke(true);
             }
             else
             {
                 _rigidbody.velocity = Vector3.zero;
+                OnPlayerMove?.Invoke(false);
             }
         }
 
@@ -92,6 +97,10 @@ namespace BlobInvasion.Player
             if (isActive)
             {
                 _rotationCoroutine = StartCoroutine(RotationCoroutine());
+            }
+            else
+            {
+                _rigidbody.angularVelocity = Vector3.zero;
             }
         }
 
