@@ -6,8 +6,9 @@ namespace BlobInvasion.Enemies.Spawner
 {
     public class EnemyWaveSpawner : MonoBehaviour
     {
-        public List<EnemyDataSO> EnemiesToSpawn { get; private set; } 
-        
+        public List<EnemyDataSO> EnemiesToSpawn { get; private set; }
+
+        [SerializeField] private Transform _playerTransform;
         [SerializeField] private EnemyMarket _enemyMarket;
 
         [Min(1)] [SerializeField] private int _waveWeightCoefficient;
@@ -64,7 +65,8 @@ namespace BlobInvasion.Enemies.Spawner
             foreach (EnemyDataSO enemy in EnemiesToSpawn)
             {
                 yield return new WaitForSeconds(_timeBetweenSpawn);
-                Instantiate(enemy.EnemyPrefab);
+                EnemyMovement enemyMove = Instantiate(enemy.EnemyPrefab).GetComponent<EnemyMovement>();
+                enemyMove.Initialize(_playerTransform);
             }
         }
     }
