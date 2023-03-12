@@ -4,21 +4,16 @@ namespace BlobInvasion.Enemies
 {
     public class EnemyMovement : MonoBehaviour
     {
-        //todo cannot be set in prefab (ask about it) 
-        //[SerializeField] private Transform _player;
-
         [SerializeField] private float _speed;
 
-        private static Transform _player;
+        private Transform _player;
 
-        private void Start()
+        public void Initialize(Transform player)
         {
-            if (_player == null)
-            {
-                _player = GameObject.FindWithTag("Player").transform;
-            }
+            _player = player;
         }
 
+        //todo replace to Update or use Rigidbody
         private void FixedUpdate()
         {
             if (_player != null)
