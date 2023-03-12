@@ -6,6 +6,7 @@ namespace BlobInvasion.Player
     {
         [SerializeField] private PlayerMovement _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
+        public PlayerAttack PlayerAttack => _playerAttack;
         
         [SerializeField] private PlayerAnimationController _animationController;
 

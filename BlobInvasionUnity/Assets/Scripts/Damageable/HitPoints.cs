@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace BlobInvasion.Damageable
 {
@@ -12,6 +13,8 @@ namespace BlobInvasion.Damageable
             CurrentHp = _maxHp;
         }
 
+        public event Action OnDie;
+
         public void TaKeDamage(int damage)
         {
             CurrentHp -= damage;
@@ -22,6 +25,7 @@ namespace BlobInvasion.Damageable
 
         private void Die()
         {
+            OnDie?.Invoke();
             Destroy(gameObject);
         }
     }

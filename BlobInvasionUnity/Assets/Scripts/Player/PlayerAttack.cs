@@ -14,6 +14,8 @@ namespace BlobInvasion.Player
        
         private Weapon _weapon;
 
+        private int _enemyNearCounter = 0;
+        
         private bool _isAttacking;
         public bool IsAttacking
         {
@@ -24,40 +26,54 @@ namespace BlobInvasion.Player
                 OnAttack?.Invoke(_isAttacking);
             }
         }
-
-        private bool _isEnemyNear;
         
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerEnter(Collider other)
         {
-            // todo to heavy getting component each frame
-            // use some methods to remember enemies, that have been checked (not sure how)
             var damageable = other.GetComponent<IDamageable>();
+
             if (damageable == null)
             {
-                _isEnemyNear = false;
                 return;
             }
+            
+            damageable.OnDie += () => StopAttack();
 
-            _isEnemyNear = true;
-            StartCoroutine(Attack());
+            IsAttacking = true;
+
+            _enemyNearCounter++;
+            
+            Debug.Log($"{other.gameObject.name} entered");
         }
         
+        private void OnTriggerExit(Collider other)
+        {
+            var damageable = other.GetComponent<IDamageable>();
+
+            if (damageable == null)
+            {
+                return;
+            }
+            
+            StopAttack();
+            
+            Debug.Log($"{other.gameObject.name} left");
+        }
+
+        private void StopAttack()
+        {
+            Debug.Log($"{_enemyNearCounter} enemies left");
+            
+            _enemyNearCounter = (_enemyNearCounter - 1 < 0) ? 0 :  _enemyNearCounter - 1;
+            if (_enemyNearCounter == 0)
+            {
+                IsAttacking = false;
+            }
+        }
+
         public void SetWeapon(Weapon weapon)
         {
             _weapon = weapon;
             _attackZone.radius = _weapon.AttackZoneRadius;
-        }
-        
-        // starts animation
-        private IEnumerator Attack()
-        {
-            while (_isEnemyNear)
-            {
-                IsAttacking = true;
-                // todo replace with animation time (but how?)
-                yield return new WaitForSeconds(_weapon.AttackCooldown);
-                IsAttacking = false;
-            }
         }
     }
 }
