@@ -6,20 +6,22 @@ namespace BlobInvasion.Damageable
     public class HitPoints : MonoBehaviour, IDamageable
     {
         [SerializeField] private int _maxHp;
-        public int CurrentHp { get; private set; }
+        private int _currentHp;
 
         private void Start()
         {
-            CurrentHp = _maxHp;
+            _currentHp = _maxHp;
         }
 
         public event Action OnDie;
+        public event Action<float, float> OnDamageTaken;
 
         public void TaKeDamage(int damage)
         {
-            CurrentHp -= damage;
+            _currentHp -= damage;
+            OnDamageTaken?.Invoke(_maxHp, _currentHp);
 
-            if (CurrentHp<=0)
+            if (_currentHp<=0)
                 Die();
         }
 
