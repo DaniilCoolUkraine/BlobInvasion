@@ -57,7 +57,7 @@ namespace BlobInvasion.Player
                 StopCoroutine(_moveCoroutine);
             }
 
-            if (isActive)
+            if (isActive && _joystick.IsDirectionNotZero)
             {
                 _moveCoroutine = StartCoroutine(MoveCoroutine());
                 OnPlayerMove?.Invoke(true);
@@ -94,7 +94,7 @@ namespace BlobInvasion.Player
                 StopCoroutine(_rotationCoroutine);
             }
 
-            if (isActive)
+            if (isActive && _joystick.IsDirectionNotZero)
             {
                 _rotationCoroutine = StartCoroutine(RotationCoroutine());
             }
