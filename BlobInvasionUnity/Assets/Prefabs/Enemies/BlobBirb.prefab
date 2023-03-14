@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 940768704284001079}
   - component: {fileID: 7864257595707884135}
   - component: {fileID: 7370355702069411218}
-  - component: {fileID: 9000445987420253266}
   m_Layer: 6
   m_Name: BlobBirb
   m_TagString: Untagged
@@ -360,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthData: {fileID: 11400000, guid: aff08d85f9d43463c9efa7437cbc1f13, type: 2}
   _maxHp: 3
 --- !u!114 &7370355702069411218
 MonoBehaviour:
@@ -373,21 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306ebd95e5480c94f9eb83463b4336ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthData: {fileID: 11400000, guid: aff08d85f9d43463c9efa7437cbc1f13, type: 2}
   _heathbarImage: {fileID: 1657231997531279518}
---- !u!114 &9000445987420253266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7864257595707884134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db838e9c5e644a75b04886dae86bea0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthbar: {fileID: 7370355702069411218}
-  _hitPoints: {fileID: 7864257595707884135}
 --- !u!1001 &7864257595056420734
 PrefabInstance:
   m_ObjectHideFlags: 0

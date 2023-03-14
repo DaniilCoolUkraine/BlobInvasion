@@ -312,10 +312,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
-    - target: {fileID: 9215919717356872761, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9215919717356872766, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -748,7 +744,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: 1e-45, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004526, y: -0.000000016117783, z: 0.0000000060230123, w: 0.9367328}
   m_LocalPosition: {x: 0, y: 13.73, z: -6.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -930,7 +926,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1240,7 +1236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 1777174661}
   _enemyMarket: {fileID: 11400000, guid: c3e977988f9b51c4a9b83ce323ace48b, type: 2}
-  _waveWeightCoefficient: 20
+  _waveWeightCoefficient: 10
   _timeBetweenWaves: 10
   _timeBetweenSpawn: 1
 --- !u!4 &1448575346 stripped
@@ -1416,8 +1412,9 @@ GameObject:
   - component: {fileID: 1616011552}
   - component: {fileID: 1616011554}
   - component: {fileID: 1616011553}
+  - component: {fileID: 1616011555}
   m_Layer: 0
-  m_Name: Foregroung
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1481,6 +1478,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616011551}
   m_CullTransparentMesh: 1
+--- !u!114 &1616011555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616011551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306ebd95e5480c94f9eb83463b4336ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthData: {fileID: 11400000, guid: 17b343ed4cc204bbd84572f2d2e88d71, type: 2}
+  _heathbarImage: {fileID: 1616011553}
 --- !u!4 &1622150046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5221075757252449, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
@@ -1521,8 +1532,6 @@ GameObject:
   - component: {fileID: 1777174665}
   - component: {fileID: 1777174671}
   - component: {fileID: 1777174670}
-  - component: {fileID: 1777174673}
-  - component: {fileID: 1777174672}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1618,6 +1627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthData: {fileID: 11400000, guid: 17b343ed4cc204bbd84572f2d2e88d71, type: 2}
   _maxHp: 2
 --- !u!114 &1777174671
 MonoBehaviour:
@@ -1637,33 +1647,6 @@ MonoBehaviour:
   _joystick: {fileID: 1951584964}
   _rigidbody: {fileID: 1777174663}
   _intervalRotation: 0.1
---- !u!114 &1777174672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777174657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db838e9c5e644a75b04886dae86bea0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthbar: {fileID: 1777174673}
-  _hitPoints: {fileID: 1777174670}
---- !u!114 &1777174673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777174657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306ebd95e5480c94f9eb83463b4336ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _heathbarImage: {fileID: 1616011553}
 --- !u!4 &1791629608 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -9070450624065022087, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
@@ -1967,7 +1950,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958472076}
-  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: 1e-45, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004526, y: -0.000000016117783, z: 0.0000000060230123, w: 0.9367328}
   m_LocalPosition: {x: 0, y: 13.73, z: -6.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -5,11 +5,22 @@ namespace BlobInvasion.Damageable
 {
     public class Healthbar : MonoBehaviour
     {
+        [SerializeField] private ScriptableObjectFloat _healthData;
         [SerializeField] private Image _heathbarImage;
 
-        public void UpdateHeathbar(float maxHeath, float currentHeath)
+        private void OnEnable()
         {
-            _heathbarImage.fillAmount = currentHeath / maxHeath;
+            _healthData.OnValueChanged += UpdateHeathbar;
+        }
+
+        private void OnDisable()
+        {
+            _healthData.OnValueChanged -= UpdateHeathbar;
+        }
+
+        private void UpdateHeathbar(float currentHeath)
+        {
+            _heathbarImage.fillAmount = currentHeath / _healthData.MaxValue.Value;
         }
     }
 }

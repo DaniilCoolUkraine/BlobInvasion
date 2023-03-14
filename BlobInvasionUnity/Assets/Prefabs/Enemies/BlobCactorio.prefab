@@ -116,7 +116,6 @@ GameObject:
   - component: {fileID: -4973866134143586305}
   - component: {fileID: 8510445569408423038}
   - component: {fileID: 8104932939311989136}
-  - component: {fileID: 1693987870477893901}
   m_Layer: 6
   m_Name: BlobCactorio
   m_TagString: Untagged
@@ -207,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthData: {fileID: 11400000, guid: bc6e7aa21099342b59e4a48134e453c3, type: 2}
   _maxHp: 5
 --- !u!114 &8104932939311989136
 MonoBehaviour:
@@ -220,21 +220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306ebd95e5480c94f9eb83463b4336ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthData: {fileID: 11400000, guid: bc6e7aa21099342b59e4a48134e453c3, type: 2}
   _heathbarImage: {fileID: 1314393380828022782}
---- !u!114 &1693987870477893901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5047668449138680732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db838e9c5e644a75b04886dae86bea0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthbar: {fileID: 8104932939311989136}
-  _hitPoints: {fileID: 8510445569408423038}
 --- !u!1 &7071159397388890626
 GameObject:
   m_ObjectHideFlags: 0
