@@ -108,6 +108,9 @@ MonoBehaviour:
   _dieParticles:
   - {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
   - {fileID: 19868354, guid: 76ea784c73256a744b24cba813a687e3, type: 3}
+  _onTakeDamageParticles:
+  - {fileID: 19889686, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
+  - {fileID: 19807532, guid: 16d4b504584fb1d4784bc23462900274, type: 3}
   _propsDrop:
   - {fileID: 2938946682655123237, guid: 03d29f3f381f00b4087d493cedb94a74, type: 3}
 --- !u!1001 &5047668448044695596

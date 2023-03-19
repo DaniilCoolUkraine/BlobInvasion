@@ -21,7 +21,7 @@ namespace BlobInvasion.Damageable
         public event Action OnDie;
         public event Action<float, float> OnDamageTaken;
 
-        public void TaKeDamage(int damage)
+        public virtual void TaKeDamage(int damage)
         {
             _currentHp -= damage;
             OnDamageTaken?.Invoke(_currentHp, _healthData.MaxHp);
@@ -33,12 +33,19 @@ namespace BlobInvasion.Damageable
         protected virtual void Die()
         {
             OnDie?.Invoke();
-            var particles = Instantiate(_dieParticles[Random.Range(0, _dieParticles.Length)],
-                transform.position + Vector3.up, Quaternion.identity);
-            particles.Play();
 
-            Destroy(particles.gameObject, particles.duration);
+            SpawnParticles(_dieParticles);
+                
             Destroy(gameObject);
+        }
+
+        protected void SpawnParticles(ParticleSystem[] particles)
+        {
+            var particle = Instantiate(particles[Random.Range(0, particles.Length)],
+                transform.position + Vector3.up, Quaternion.identity);
+            particle.Play();
+
+            Destroy(particle.gameObject, particle.duration);
         }
     }
 }
