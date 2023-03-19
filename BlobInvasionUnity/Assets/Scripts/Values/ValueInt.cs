@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace BlobInvasion
+namespace BlobInvasion.Values
 {
     [System.Serializable]
-    public struct ValueInt
+    public class ValueInt
     {
         [SerializeField] private string _name;
         public string Name => _name;

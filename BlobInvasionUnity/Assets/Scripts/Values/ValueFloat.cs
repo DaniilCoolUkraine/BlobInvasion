@@ -3,7 +3,7 @@ using UnityEngine;
 namespace BlobInvasion
 {
     [System.Serializable]
-    public struct ValueFloat
+    public class ValueFloat
     {
         [SerializeField] private string _name;
         public string Name => _name;

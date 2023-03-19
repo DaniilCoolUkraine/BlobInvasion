@@ -4,16 +4,18 @@ namespace BlobInvasion.Collectable.Props
 {
     public class Coin : Item
     {
+        [SerializeField] private ScriptableObjectInt _coinData;
+        
         public override void Collect(GameObject collector)
         {
             AddCoin();
             base.Collect(collector);
         }
-
-        // todo rewrite it to playerPrefs
+        
         private void AddCoin()
         {
-            Debug.Log("coin added");
+            int newValue = _coinData.Value.Value + 1;
+            _coinData.ChangeValue(newValue, true);
         }
     }
 }
