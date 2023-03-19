@@ -8,11 +8,18 @@ namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
         //todo add "additional damage" system (have no idea)
 
         [SerializeField] private int _damage;
-        [SerializeField] private float _attackSpeed;
+        [SerializeField] private int _additionalDamage;
+        
         [SerializeField] private float _attackRadius;
 
         public int Damage => _damage;
-        public float AttackSpeed => _attackSpeed;
+        public int AdditionalDamage => _additionalDamage;
+        
         public float AttackRadius => _attackRadius;
+        
+        public void AddDamage(int additionalDamage)
+        {
+            _additionalDamage += additionalDamage;
+        }
     }
 }

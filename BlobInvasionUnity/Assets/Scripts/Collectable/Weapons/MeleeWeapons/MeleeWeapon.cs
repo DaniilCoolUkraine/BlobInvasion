@@ -6,7 +6,7 @@ namespace BlobInvasion.Collectable.Weapons.MeleeWeapons
     {
         public override void Attack(IDamageable damageable)
         {
-            damageable.TaKeDamage(Damage);
+            damageable.TaKeDamage(_weaponData.Damage + _weaponData.AdditionalDamage);
         }
     }
 }
