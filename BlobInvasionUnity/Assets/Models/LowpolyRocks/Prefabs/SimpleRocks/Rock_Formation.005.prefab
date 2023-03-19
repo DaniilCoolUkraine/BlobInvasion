@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8459904658277782511}
   - component: {fileID: 4536536416641666916}
   - component: {fileID: 6591471363334745297}
+  - component: {fileID: 5930418645096687185}
+  - component: {fileID: 3217099828404058071}
   m_Layer: 0
   m_Name: Rock_Formation.005
   m_TagString: Untagged
@@ -27,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 4661246483683375809}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 96.15527, y: 96.15527, z: 96.15526}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 200, y: 200.00002, z: 200.00002}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5930418645096687185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4661246483683375809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027514294, y: 0.022607649, z: 0.02015368}
+  m_Center: {x: 0.0056340727, y: -0.0078414995, z: 0.01007684}
+--- !u!65 &3217099828404058071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4661246483683375809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027514294, y: 0.022607649, z: 0.02015368}
+  m_Center: {x: 0.0056340727, y: -0.0078414995, z: 0.01007684}

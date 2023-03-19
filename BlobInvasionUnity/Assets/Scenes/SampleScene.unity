@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 138661792}
   m_Layer: 0
-  m_Name: Canvases
+  m_Name: --Canvases--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432943523}
   m_Layer: 0
-  m_Name: Managers
+  m_Name: --Managers--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472030351}
   m_Layer: 0
-  m_Name: Cameras
+  m_Name: --Cameras--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -496,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737846554}
   m_Layer: 0
-  m_Name: Enviroment
+  m_Name: --Enviroment--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -738,7 +738,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: 1e-45, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004523, y: 3e-45, z: -1e-45, w: 0.9367328}
   m_LocalPosition: {x: 0, y: 13.73, z: -6.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1753,7 +1753,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958472076}
-  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: 1e-45, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004523, y: 3e-45, z: -1e-45, w: 0.9367328}
   m_LocalPosition: {x: 0, y: 13.73, z: -6.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1848,7 +1848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133955143}
   m_Layer: 0
-  m_Name: Scene
+  m_Name: --Scene--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
