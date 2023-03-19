@@ -5774,6 +5774,14 @@ PrefabInstance:
       propertyPath: _health
       value: 
       objectReference: {fileID: 1912484810}
+    - target: {fileID: 3729824718455058178, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
+      propertyPath: _dieParticles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729824718455058178, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
+      propertyPath: _dieParticles.Array.data[0]
+      value: 
+      objectReference: {fileID: 19819134, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
     - target: {fileID: 3729824718455058179, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
       propertyPath: _joystick
       value: 

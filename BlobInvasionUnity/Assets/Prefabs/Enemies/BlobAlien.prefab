@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 2138414719}
   - component: {fileID: -7656507159583618976}
   - component: {fileID: 5611719465410495897}
-  - component: {fileID: -7261527381070632976}
+  - component: {fileID: -1368003384618943295}
   m_Layer: 6
   m_Name: BlobAlien
   m_TagString: Untagged
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad00129e38ad4bab8d31142d6fe3cb04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7261527381070632976
+--- !u!114 &-1368003384618943295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -578,11 +578,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4422092530760899161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
+  m_Script: {fileID: 11500000, guid: 0996cd4082aa4ce8aa924e88258360d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _healthData: {fileID: 11400000, guid: 7d62fffa5a540d3489e79cb3efb965bd, type: 2}
-  _dieParticles: {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
+  _dieParticles:
+  - {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
+  - {fileID: 19868354, guid: 76ea784c73256a744b24cba813a687e3, type: 3}
+  _propsDrop:
+  - {fileID: 2938946682655123237, guid: 03d29f3f381f00b4087d493cedb94a74, type: 3}
 --- !u!1001 &6686077438439386404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -641,11 +645,11 @@ PrefabInstance:
     - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
       propertyPath: _health
       value: 
-      objectReference: {fileID: -7261527381070632976}
+      objectReference: {fileID: -1368003384618943295}
     - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
       propertyPath: _hitPoints
       value: 
-      objectReference: {fileID: -7261527381070632976}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
 --- !u!4 &1366938645851262084 stripped

@@ -1,6 +1,7 @@
 ﻿using System;
 using BlobInvasion.Damageable.ScriptableObjects;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace BlobInvasion.Damageable
 {
@@ -8,7 +9,7 @@ namespace BlobInvasion.Damageable
     {
         [SerializeField] private HealthData _healthData;
 
-        [SerializeField] private ParticleSystem _dieParticles;
+        [SerializeField] private ParticleSystem[] _dieParticles;
 
         private int _currentHp;
 
@@ -29,10 +30,11 @@ namespace BlobInvasion.Damageable
                 Die();
         }
 
-        private void Die()
+        protected virtual void Die()
         {
             OnDie?.Invoke();
-            var particles = Instantiate(_dieParticles, transform.position + Vector3.up, Quaternion.identity);
+            var particles = Instantiate(_dieParticles[Random.Range(0, _dieParticles.Length)],
+                transform.position + Vector3.up, Quaternion.identity);
             particles.Play();
 
             Destroy(particles.gameObject, particles.duration);
