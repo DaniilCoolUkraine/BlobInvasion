@@ -1,21 +1,30 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace BlobInvasion.Enemies
 {
     public class EnemyMovement : MonoBehaviour
     {
         [SerializeField] private float _speed;
+        [SerializeField] private NavMeshAgent _agent;
 
         private Transform _player;
-        
+
+        private void Awake()
+        {
+            _agent.speed = _speed;
+        }
+
         private void Update()
         {
             if (_player != null)
             {
-                transform.position =
-                    Vector3.MoveTowards(transform.position, _player.position, _speed * Time.deltaTime);
-                
-                transform.LookAt(_player);
+                _agent.SetDestination(_player.position);
+                // transform.position =
+                //     Vector3.MoveTowards(transform.position, _player.position, _speed * Time.deltaTime);
+                //
+                // transform.LookAt(_player);
             }
         }
         
