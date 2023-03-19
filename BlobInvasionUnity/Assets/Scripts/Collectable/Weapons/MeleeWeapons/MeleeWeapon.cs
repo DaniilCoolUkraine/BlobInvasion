@@ -1,8 +1,8 @@
 ﻿using BlobInvasion.Damageable;
 
-namespace BlobInvasion.Items.Weapons
+namespace BlobInvasion.Collectable.Weapons.MeleeWeapons
 {
-    public abstract class MeleeWeapon: Weapon
+    public class MeleeWeapon: Weapon
     {
         public override void Attack(IDamageable damageable)
         {

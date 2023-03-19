@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BlobInvasion.Items.Weapons.ScriptableObjects
+namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
 {
     [CreateAssetMenu(fileName = "NewWeapon", menuName = "WeaponData", order = 0)]
     public class WeaponDataSO : ScriptableObject
