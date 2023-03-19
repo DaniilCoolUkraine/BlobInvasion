@@ -1,6 +1,6 @@
 ﻿using BlobInvasion.Damageable;
 
-namespace BlobInvasion.Items.Weapons
+namespace BlobInvasion.Collectable.Weapons
 {
     public interface IDamager
     {

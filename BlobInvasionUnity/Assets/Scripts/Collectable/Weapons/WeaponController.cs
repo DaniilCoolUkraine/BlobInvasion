@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace BlobInvasion.Items.Weapons
+namespace BlobInvasion.Collectable.Weapons
 {
     public class WeaponController : MonoBehaviour
     {
