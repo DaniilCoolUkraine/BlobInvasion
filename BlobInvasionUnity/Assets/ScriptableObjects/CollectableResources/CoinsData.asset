@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
     _name: PlayerCurrentCoins
-    _value: 0
+    _value: 8
   _minValue:
     _name: PlayerMinimumCoins
     _value: 0
   _maxValue:
     _name: PlayerMaximumCoins
-    _value: 9999
+    _value: 99999

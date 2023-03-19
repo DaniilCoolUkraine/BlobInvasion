@@ -21,12 +21,12 @@ namespace BlobInvasion
         public void RestoreAllValues(bool isSendEvent = false)
         {
             int restoredValue = _value.RestoreValue();
-            int restoredMinValue = _minValue.RestoreValue();
-            int restoredMaxValue = _maxValue.RestoreValue();
+            // int restoredMinValue = _minValue.RestoreValue();
+            // int restoredMaxValue = _maxValue.RestoreValue();
 
             ChangeValue(_value, restoredValue, isSendEvent);
-            ChangeValue(_minValue, restoredMinValue, isSendEvent);
-            ChangeValue(_maxValue, restoredMaxValue, isSendEvent);
+            // ChangeValue(_minValue, restoredMinValue, isSendEvent);
+            // ChangeValue(_maxValue, restoredMaxValue, isSendEvent);
         }
 
         public void ChangeValue(int newValue, bool isSendEvent = false)
