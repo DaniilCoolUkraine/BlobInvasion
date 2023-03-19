@@ -25,6 +25,8 @@ namespace BlobInvasion.Collectable.Props.Bonuses
 
             foreach (WeaponDataSO weapon in _weapons)
                 weapon.AddDamage(-_additionalDamage);
+            
+            Destroy(gameObject);
         }
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2938946682655123237
+--- !u!1 &5556976850548910087
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2936382277959596737}
-  - component: {fileID: 2934840480700531589}
-  - component: {fileID: 2926992391975980733}
-  - component: {fileID: 5379354076098602958}
-  - component: {fileID: 7447956289135456196}
-  - component: {fileID: 535950097477549982}
-  m_Layer: 7
-  m_Name: Coin
+  - component: {fileID: 5556976850548910080}
+  - component: {fileID: 5556976850548910083}
+  - component: {fileID: 5556976850548910082}
+  - component: {fileID: 5556976850548910085}
+  - component: {fileID: 5556976850548910084}
+  m_Layer: 0
+  m_Name: DamageUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2936382277959596737
+--- !u!4 &5556976850548910080
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938946682655123237}
+  m_GameObject: {fileID: 5556976850548910087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.05, y: 0.56, z: 11.14}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2934840480700531589
+--- !u!33 &5556976850548910083
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938946682655123237}
-  m_Mesh: {fileID: 4300000, guid: 5ebdf29589ca23244b5c20511b811ffa, type: 3}
---- !u!23 &2926992391975980733
+  m_GameObject: {fileID: 5556976850548910087}
+  m_Mesh: {fileID: 4300000, guid: 94f564722a91b16489e811db6f28526a, type: 3}
+--- !u!23 &5556976850548910082
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938946682655123237}
+  m_GameObject: {fileID: 5556976850548910087}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,48 +85,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5379354076098602958
-CapsuleCollider:
+--- !u!65 &5556976850548910085
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938946682655123237}
+  m_GameObject: {fileID: 5556976850548910087}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.19919115
-  m_Height: 0.39820772
-  m_Direction: 1
-  m_Center: {x: -0.0006971806, y: -0.00012963265, z: 0}
---- !u!54 &7447956289135456196
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938946682655123237}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &535950097477549982
+  m_Size: {x: 0.27431294, y: 0.3996148, z: 0.08}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5556976850548910084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2938946682655123237}
+  m_GameObject: {fileID: 5556976850548910087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 325726c5ff6749f392dfa437b3996d90, type: 3}
+  m_Script: {fileID: 11500000, guid: 667960446ecb4acb9c2261419ff9195b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _collectParticles:
-  - {fileID: 19847330, guid: c8ded7e7fd6f5344a845fe65c2ea578d, type: 3}
-  _coinData: {fileID: 11400000, guid: 19be5f00145834512ac8a5af765af371, type: 2}
+  - {fileID: 19848222, guid: e4fc72c1b3da74d4697708bcd2a9db60, type: 3}
+  _meshRenderer: {fileID: 5556976850548910082}
+  _collider: {fileID: 5556976850548910085}
+  _weapons:
+  - {fileID: 11400000, guid: a2c40c2fb6be3564083bbc05ad8f4642, type: 2}
+  - {fileID: 11400000, guid: 7bd2ebc3c22beb748bd5f2ec02348dea, type: 2}
+  _additionalDamage: 4
+  _time: 10

@@ -1,11 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace BlobInvasion.Collectable.Props
 {
     public abstract class Item : MonoBehaviour, ICollectable
     {
         public event Action<bool> OnCollected;
+        
+        [SerializeField] private ParticleSystem[] _collectParticles;
         
         private bool _isColected = false;
         public bool IsCollected
@@ -21,7 +24,17 @@ namespace BlobInvasion.Collectable.Props
         public virtual void Collect(GameObject collector)
         {
             IsCollected = true;
+            SpawnParticles(_collectParticles);
             Destroy(gameObject);
+        }
+        
+        private void SpawnParticles(ParticleSystem[] particles)
+        {
+            var particle = Instantiate(particles[Random.Range(0, particles.Length)],
+                transform.position + Vector3.up, Quaternion.identity);
+            particle.Play();
+
+            Destroy(particle.gameObject, particle.duration);
         }
     }
 }
