@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: -6603435022927557267}
   - component: {fileID: 940768704284001079}
   - component: {fileID: 7864257595707884135}
-  - component: {fileID: 7370355702069411218}
   m_Layer: 6
   m_Name: BlobBirb
   m_TagString: Untagged
@@ -105,22 +104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthData: {fileID: 11400000, guid: aff08d85f9d43463c9efa7437cbc1f13, type: 2}
-  _maxHp: 3
---- !u!114 &7370355702069411218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7864257595707884134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306ebd95e5480c94f9eb83463b4336ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthData: {fileID: 11400000, guid: aff08d85f9d43463c9efa7437cbc1f13, type: 2}
-  _heathbarSprite: {fileID: 881587571369397252}
+  _healthData: {fileID: 11400000, guid: 6a5d4710428e49144ad8a2fa80186bb1, type: 2}
+  _dieParticles: {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
 --- !u!1001 &7125549680660601075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,13 +161,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 7864257595707884135}
+    - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
+      propertyPath: _hitPoints
+      value: 
+      objectReference: {fileID: 7864257595707884135}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
---- !u!212 &881587571369397252 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7989120306301310199, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
-  m_PrefabInstance: {fileID: 7125549680660601075}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3229897714077890899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5634547895636664736, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}

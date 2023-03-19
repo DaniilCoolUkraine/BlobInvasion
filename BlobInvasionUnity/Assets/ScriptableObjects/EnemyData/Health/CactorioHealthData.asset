@@ -9,15 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533fb462df08f4603a69920894f6d4e0, type: 3}
-  m_Name: HealthAlien
+  m_Script: {fileID: 11500000, guid: b07cc4489f3048d48d3eff97f6841795, type: 3}
+  m_Name: CactorioHealthData
   m_EditorClassIdentifier: 
-  _value:
-    _name: healthAlien
-    _value: 1
-  _minValue:
-    _name: healthMinAlien
-    _value: 0
-  _maxValue:
-    _name: healthMaxAlien
-    _value: 1
+  _maxHp: 5

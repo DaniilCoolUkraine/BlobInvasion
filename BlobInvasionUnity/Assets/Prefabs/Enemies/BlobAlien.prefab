@@ -492,7 +492,6 @@ GameObject:
   - component: {fileID: -7656507159583618976}
   - component: {fileID: 5611719465410495897}
   - component: {fileID: -7261527381070632976}
-  - component: {fileID: 9172604038341579618}
   m_Layer: 6
   m_Name: BlobAlien
   m_TagString: Untagged
@@ -582,22 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthData: {fileID: 11400000, guid: 80fad23a261c442f29ed116870932e6e, type: 2}
-  _maxHp: 1
---- !u!114 &9172604038341579618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4422092530760899161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306ebd95e5480c94f9eb83463b4336ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthData: {fileID: 11400000, guid: 80fad23a261c442f29ed116870932e6e, type: 2}
-  _heathbarSprite: {fileID: 3609272909532363219}
+  _healthData: {fileID: 11400000, guid: 7d62fffa5a540d3489e79cb3efb965bd, type: 2}
+  _dieParticles: {fileID: 19872744, guid: cca79b260878071418290367024a6716, type: 3}
 --- !u!1001 &6686077438439386404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -653,15 +638,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: -7261527381070632976}
+    - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
+      propertyPath: _hitPoints
+      value: 
+      objectReference: {fileID: -7261527381070632976}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
 --- !u!4 &1366938645851262084 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5634547895636664736, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
-  m_PrefabInstance: {fileID: 6686077438439386404}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &3609272909532363219 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 7989120306301310199, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
   m_PrefabInstance: {fileID: 6686077438439386404}
   m_PrefabAsset: {fileID: 0}

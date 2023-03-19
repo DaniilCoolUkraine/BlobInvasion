@@ -18,7 +18,7 @@ namespace BlobInvasion.Collectable.Weapons
 
         public void CreateWeapon()
         {
-            CollectWeapon weapon = Instantiate(_weapons[Random.Range(0, _weapons.Length)]);
+            CollectWeapon weapon = Instantiate(_weapons[Random.Range(0, _weapons.Length)], new Vector3(-6, 1, -6), Quaternion.identity);
             weapon.Initialize(_parentBone, _parentConstraint);
         }
     }

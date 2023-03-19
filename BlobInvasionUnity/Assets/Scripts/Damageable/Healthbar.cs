@@ -4,23 +4,23 @@ namespace BlobInvasion.Damageable
 {
     public class Healthbar : MonoBehaviour
     {
-        [SerializeField] private ScriptableObjectFloat _healthData;
+        [SerializeField] private Health _health;
         [SerializeField] private SpriteRenderer _heathbarSprite;
 
         private void OnEnable()
         {
-            _healthData.OnValueChanged += UpdateHeathbar;
+            _health.OnDamageTaken += UpdateHealthbar;
         }
 
         private void OnDisable()
         {
-            _healthData.OnValueChanged -= UpdateHeathbar;
+            _health.OnDamageTaken -= UpdateHealthbar;
         }
 
-        private void UpdateHeathbar(float currentHeath)
+        private void UpdateHealthbar(float currentHeath, float maxHealth)
         {
             Vector2 previousSize = _heathbarSprite.size;
-            _heathbarSprite.size = new Vector2(currentHeath / _healthData.MaxValue.Value, previousSize.y);
+            _heathbarSprite.size = new Vector2(currentHeath / maxHealth, previousSize.y);
         }
     }
 }
