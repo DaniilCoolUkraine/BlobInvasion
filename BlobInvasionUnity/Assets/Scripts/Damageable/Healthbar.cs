@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace BlobInvasion.Damageable
 {
     public class Healthbar : MonoBehaviour
     {
         [SerializeField] private ScriptableObjectFloat _healthData;
-        [SerializeField] private Image _heathbarImage;
+        [SerializeField] private SpriteRenderer _heathbarSprite;
 
         private void OnEnable()
         {
@@ -20,7 +19,8 @@ namespace BlobInvasion.Damageable
 
         private void UpdateHeathbar(float currentHeath)
         {
-            _heathbarImage.fillAmount = currentHeath / _healthData.MaxValue.Value;
+            Vector2 previousSize = _heathbarSprite.size;
+            _heathbarSprite.size = new Vector2(currentHeath / _healthData.MaxValue.Value, previousSize.y);
         }
     }
 }
