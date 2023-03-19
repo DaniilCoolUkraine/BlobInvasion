@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections;
+using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
-using BlobInvasion.Items.Weapons;
 using UnityEngine;
 
 namespace BlobInvasion.Player
