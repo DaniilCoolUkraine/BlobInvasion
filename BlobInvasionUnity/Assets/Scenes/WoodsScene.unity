@@ -158,7 +158,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44682991}
-  m_LocalRotation: {x: 0.35004523, y: -1e-45, z: -0, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: -0, w: 0.9367328}
   m_LocalPosition: {x: -10.1, y: 13.968038, z: -6.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   - {fileID: 1875422398}
   - {fileID: 1225323984}
   - {fileID: 778508879}
-  _waveWeightCoefficient: 5
+  _waveWeightCoefficient: 20
   _timeBetweenWaves: 10
   _timeBetweenSpawn: 1
 --- !u!4 &739929484 stripped
@@ -3572,7 +3572,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283243988}
-  m_LocalRotation: {x: 0.35004523, y: -1e-45, z: -0, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: -0, w: 0.9367328}
   m_LocalPosition: {x: -10.1, y: 13.968038, z: -6.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -7,21 +7,21 @@ namespace BlobInvasion.Enemies
         [SerializeField] private float _speed;
 
         private Transform _player;
-
-        public void Initialize(Transform player)
-        {
-            _player = player;
-        }
-
-        //todo replace to Update or use Rigidbody
-        private void FixedUpdate()
+        
+        private void Update()
         {
             if (_player != null)
             {
                 transform.position =
-                    Vector3.MoveTowards(transform.position, _player.position, _speed * Time.fixedDeltaTime);
+                    Vector3.MoveTowards(transform.position, _player.position, _speed * Time.deltaTime);
+                
                 transform.LookAt(_player);
             }
+        }
+        
+        public void Initialize(Transform player)
+        {
+            _player = player;
         }
     }
 }

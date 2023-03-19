@@ -136,7 +136,7 @@ namespace AnimationInstancing
                     }
                     info.skinnedMeshRenderer = listSkinnedMeshRenderer.ToArray();
                     info.meshRenderer = listMeshRenderer.ToArray();
-                    //todo, to make sure whether the MeshRenderer can be in the LOD.
+                  
                     info.meshFilter = null;
                     for (int j = 0; j != lods[i].renderers.Length; ++j)
                     {
@@ -592,7 +592,7 @@ namespace AnimationInstancing
             nameCode += attachment.lodInfo[0].meshRenderer.Length > 0? attachment.lodInfo[0].meshRenderer[0].name.GetHashCode(): 0;
             if (attachment.lodInfo[0].meshRenderer.Length == 0)
             {
-                //todo, to support the attachment that has skinnedMeshRenderer;
+                
                 int skinnedMeshRenderCount = attachment.lodInfo[0].skinnedMeshRenderer.Length;
                 nameCode += skinnedMeshRenderCount > 0? attachment.lodInfo[0].skinnedMeshRenderer[0].name.GetHashCode(): 0;
             }

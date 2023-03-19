@@ -11,8 +11,6 @@ namespace BlobInvasion.Enemies
 
         private IDamageable _damageable;
         
-        // todo rewrite all this (maybe)
-        
         private void OnCollisionEnter(Collision collision)
         {
             _damageable = collision.gameObject.GetComponent<IDamageable>();

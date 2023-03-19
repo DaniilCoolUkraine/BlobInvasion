@@ -500,7 +500,7 @@ namespace AnimationInstancing
             TextureFormat format = TextureFormat.RGBAHalf;
             if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.OpenGLES2)
             {
-                //todo
+                
                 format = TextureFormat.RGBA32;
             }
             int count = reader.ReadInt32();
@@ -869,7 +869,7 @@ namespace AnimationInstancing
             }
             if (boneIndex >= 0)
             {
-                //todo
+                
                 BindAttachment(vertexCache, vertexCache, vertexCache.mesh, boneIndex);
             }
             if (vertexCache.materials == null)
