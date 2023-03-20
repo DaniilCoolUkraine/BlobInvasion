@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
 {
-    public class DamagePowerUp : PowerUp
+    public class SpeedPowerUp : PowerUp
     {
         protected override IEnumerator PowerUpCharacteristic(PlayerController playerController)
         {
-            playerController.PlayerAttack.ApplyPowerUp(_powerUpData.PowerMultiplier);
+            playerController.PlayerMovement.ApplyPowerUp(_powerUpData.PowerMultiplier);
 
             yield return new WaitForSeconds(_powerUpData.PoweringTime);
 
-            playerController.PlayerAttack.ApplyPowerUp(-_powerUpData.PowerMultiplier);
+            playerController.PlayerMovement.ApplyPowerUp(-_powerUpData.PowerMultiplier);
             
             Destroy(gameObject);
         }

@@ -1,7 +1,9 @@
-﻿namespace BlobInvasion.Collectable.Props.Bonuses
+﻿using BlobInvasion.Player;
+
+namespace BlobInvasion.Collectable.Props.Bonuses
 {
     public interface IPowerUp
     {
-        public void UsePowerUp(IPowerable powerable);
+        public void UsePowerUp(PlayerController playerController);
     }
 }

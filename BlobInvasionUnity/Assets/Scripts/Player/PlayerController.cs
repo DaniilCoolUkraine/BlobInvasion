@@ -11,6 +11,7 @@ namespace BlobInvasion.Player
         [SerializeField] private PlayerCollector _playerCollector;
 
         public PlayerAttack PlayerAttack => _playerAttack;
+        public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
         
         [SerializeField] private PlayerAnimationController _animationController;
 
@@ -36,7 +37,7 @@ namespace BlobInvasion.Player
 
             if (powerUp != null)
             {
-                powerUp.UsePowerUp(_playerAttack);
+                powerUp.UsePowerUp(this);
             }
         }
     }

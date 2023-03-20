@@ -116,6 +116,7 @@ MonoBehaviour:
   _propsDrop:
   - {fileID: 2938946682655123237, guid: 03d29f3f381f00b4087d493cedb94a74, type: 3}
   - {fileID: 5556976850548910087, guid: c0449da28b686084d8716ae8928c4383, type: 3}
+  - {fileID: 3770883699955910257, guid: 2ead81c32a0e95446914c23545a6333e, type: 3}
 --- !u!195 &-4925540802947458811
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
-﻿using BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects;
+﻿using System.Collections;
+using BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects;
+using BlobInvasion.Player;
 using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
@@ -22,6 +24,14 @@ namespace BlobInvasion.Collectable.Props.Bonuses
             _collider.enabled = false;
         }
 
-        public abstract void UsePowerUp(IPowerable powerable);
+        public virtual void UsePowerUp(PlayerController playerController)
+        {
+            if (playerController == null)
+                return;
+            
+            StartCoroutine(PowerUpCharacteristic(playerController));
+        }
+
+        protected abstract IEnumerator PowerUpCharacteristic(PlayerController playerController);
     }
 }
