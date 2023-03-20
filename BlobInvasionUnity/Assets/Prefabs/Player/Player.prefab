@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 3729824718455058181}
   - component: {fileID: 3729824718455058204}
   - component: {fileID: 3729824718455058179}
-  - component: {fileID: 3729824718455058178}
+  - component: {fileID: 827658069359843458}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 3729824718455058179}
   _playerAttack: {fileID: 3729824718599055217}
+  _playerHealth: {fileID: 827658069359843458}
   _playerCollector: {fileID: 3729824718455058204}
   _animationController: {fileID: 3729824718455058181}
 --- !u!114 &3729824718455058181
@@ -208,7 +209,7 @@ MonoBehaviour:
   _joystick: {fileID: 0}
   _rigidbody: {fileID: 3729824718455058187}
   _intervalRotation: 0.1
---- !u!114 &3729824718455058178
+--- !u!114 &827658069359843458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,7 +218,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3729824718455058189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7ceecfcd17a46db94bf5b6ff6f8d122, type: 3}
+  m_Script: {fileID: 11500000, guid: 8866ed0e620b4c0c8de547a5a160cbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _healthData: {fileID: 11400000, guid: 17b343ed4cc204bbd84572f2d2e88d71, type: 2}
@@ -729,11 +730,11 @@ PrefabInstance:
     - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
       propertyPath: _health
       value: 
-      objectReference: {fileID: 3729824718455058178}
+      objectReference: {fileID: 827658069359843458}
     - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
       propertyPath: _hitPoints
       value: 
-      objectReference: {fileID: 3729824718455058178}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
 --- !u!4 &1381512393593843475 stripped

@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace BlobInvasion.Damageable
 {
-    public class Health : MonoBehaviour, IDamageable
+    public abstract class Health : MonoBehaviour, IDamageable
     {
         [SerializeField] private HealthData _healthData;
 

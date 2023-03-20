@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b3eac1d067a4848a2c47f1954e9fa82, type: 3}
-  m_Name: AxeData
+  m_Script: {fileID: 11500000, guid: 98e0c6d74cf84694b3772d5f33947b1e, type: 3}
+  m_Name: InvincibilityPowerUp
   m_EditorClassIdentifier: 
-  _damage: 3
-  _additionalDamage: 0
-  _attackRadius: 3
+  _powerMultiplier: 1
+  _poweringTime: 5
