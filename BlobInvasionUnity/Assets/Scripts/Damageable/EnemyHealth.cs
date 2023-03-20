@@ -16,7 +16,7 @@ namespace BlobInvasion.Damageable
 
         protected override void Die()
         {
-            Instantiate(_propsDrop[Random.Range(0, _propsDrop.Length)], transform.position + Vector3.up, Quaternion.identity);
+            Instantiate(_propsDrop[Random.Range(0, _propsDrop.Length)], transform.position + Vector3.up * 2, Quaternion.identity);
             base.Die();
         }
     }
