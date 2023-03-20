@@ -17,7 +17,6 @@ namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
         
         public void AddDamage(int additionalDamage)
         {
-            Debug.Log(additionalDamage);
             _additionalDamage += additionalDamage;
         }
     }

@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 1195245738472971568}
   - component: {fileID: 5421288632285645728}
   - component: {fileID: 5820568915347144420}
+  - component: {fileID: 4028659586934082869}
   m_Layer: 0
   m_Name: Rock_Formation.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2430172588750760805
 Transform:
@@ -111,3 +112,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.028711172, y: 0.023939908, z: 0.021487538}
   m_Center: {x: 0.0029532453, y: 0.0005676105, z: 0.010568768}
+--- !u!208 &4028659586934082869
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888093199111553146}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.014, y: 0.012, z: 0.011000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.003, y: 0.001, z: 0.011000001}
+  m_TimeToStationary: 0.5
