@@ -2,7 +2,7 @@
 
 namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "NewWeapon", menuName = "WeaponData", order = 0)]
+    [CreateAssetMenu(fileName = "NewWeapon", menuName = "ScriptableObjects/WeaponData", order = 0)]
     public class WeaponDataSO : ScriptableObject
     {
         [SerializeField] private int _damage;

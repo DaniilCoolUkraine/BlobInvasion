@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5556976850548910085}
   - component: {fileID: 5556976850548910084}
   m_Layer: 0
-  m_Name: DamageUp
+  m_Name: DamagePowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,8 +114,4 @@ MonoBehaviour:
   - {fileID: 19848222, guid: e4fc72c1b3da74d4697708bcd2a9db60, type: 3}
   _meshRenderer: {fileID: 5556976850548910082}
   _collider: {fileID: 5556976850548910085}
-  _weapons:
-  - {fileID: 11400000, guid: a2c40c2fb6be3564083bbc05ad8f4642, type: 2}
-  - {fileID: 11400000, guid: 7bd2ebc3c22beb748bd5f2ec02348dea, type: 2}
-  _additionalDamage: 4
-  _time: 10
+  _powerUpData: {fileID: 11400000, guid: 3e7f13d9efe98a843b72ef82762614fa, type: 2}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects;
+using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
 {
@@ -6,6 +7,10 @@ namespace BlobInvasion.Collectable.Props.Bonuses
     {
         [SerializeField] protected MeshRenderer _meshRenderer;
         [SerializeField] protected Collider _collider;
+
+        [Space(10)]
+        
+        [SerializeField] protected PowerUpDataSO _powerUpData;
         
         public override void Collect(GameObject collector)
         {

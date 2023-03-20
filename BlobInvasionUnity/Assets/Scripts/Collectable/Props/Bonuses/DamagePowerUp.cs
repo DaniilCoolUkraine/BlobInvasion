@@ -5,9 +5,6 @@ namespace BlobInvasion.Collectable.Props.Bonuses
 {
     public class DamagePowerUp : PowerUp
     {
-        [SerializeField] private int _additionalDamage;
-        [SerializeField] private float _time;
-        
         public override void UsePowerUp(IPowerable powerable)
         {
             if (powerable == null)
@@ -18,11 +15,11 @@ namespace BlobInvasion.Collectable.Props.Bonuses
         
         private IEnumerator DamageUp(IPowerable powerable)
         {
-            powerable.ApplyPowerUp(_additionalDamage);
+            powerable.ApplyPowerUp(_powerUpData.PowerMultiplier);
             
-            yield return new WaitForSeconds(_time);
+            yield return new WaitForSeconds(_powerUpData.PoweringTime);
 
-            powerable.ApplyPowerUp(-_additionalDamage);
+            powerable.ApplyPowerUp(-_powerUpData.PowerMultiplier);
             
             Destroy(gameObject);
         }
