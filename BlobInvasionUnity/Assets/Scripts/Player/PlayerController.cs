@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BlobInvasion.Collectable.Props.Bonuses;
+using UnityEngine;
 
 namespace BlobInvasion.Player
 {
@@ -6,6 +7,9 @@ namespace BlobInvasion.Player
     {
         [SerializeField] private MoveByPhysicsJoysticController _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
+
+        [SerializeField] private PlayerCollector _playerCollector;
+
         public PlayerAttack PlayerAttack => _playerAttack;
         
         [SerializeField] private PlayerAnimationController _animationController;
@@ -14,12 +18,26 @@ namespace BlobInvasion.Player
         {
             _playerMovement.OnPlayerMove += _animationController.PlayMovementAnimation;
             _playerAttack.OnAttack += _animationController.PlayAttackAnimation;
+
+            _playerCollector.OnCollected += OnCollected;
         }
 
         private void OnDisable()
         {
             _playerMovement.OnPlayerMove -= _animationController.PlayMovementAnimation;
             _playerAttack.OnAttack -= _animationController.PlayAttackAnimation;
+            
+            _playerCollector.OnCollected -= OnCollected;
+        }
+
+        private void OnCollected(GameObject collectedGameObject)
+        {
+            IPowerUp powerUp = collectedGameObject.GetComponent<IPowerUp>();
+
+            if (powerUp != null)
+            {
+                powerUp.UsePowerUp(_playerAttack);
+            }
         }
     }
 }

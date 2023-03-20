@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
 {
@@ -12,12 +11,10 @@ namespace BlobInvasion.Collectable.Props.Bonuses
         {
             IsCollected = true;
             
-            ApplyPowerUp();
-
             _meshRenderer.enabled = false;
             _collider.enabled = false;
         }
 
-        public abstract void ApplyPowerUp();
+        public abstract void UsePowerUp(IPowerable powerable);
     }
 }

@@ -11,5 +11,9 @@ namespace BlobInvasion.Collectable.Weapons
         public float AttackZoneRadius => _weaponData.AttackRadius;
 
         public abstract void Attack(IDamageable damageable);
+        public void ApplyDamageUp(int additionalDamage)
+        {
+            _weaponData.AddDamage(additionalDamage);
+        }
     }
 }

@@ -5,8 +5,6 @@ namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
     [CreateAssetMenu(fileName = "NewWeapon", menuName = "WeaponData", order = 0)]
     public class WeaponDataSO : ScriptableObject
     {
-        //todo add "additional damage" system (have no idea)
-
         [SerializeField] private int _damage;
         [SerializeField] private int _additionalDamage;
         
@@ -19,6 +17,7 @@ namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
         
         public void AddDamage(int additionalDamage)
         {
+            Debug.Log(additionalDamage);
             _additionalDamage += additionalDamage;
         }
     }

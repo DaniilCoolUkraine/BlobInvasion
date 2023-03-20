@@ -1,11 +1,12 @@
 ﻿using System;
+using BlobInvasion.Collectable.Props.Bonuses;
 using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
 using UnityEngine;
 
 namespace BlobInvasion.Player
 {
-    public class PlayerAttack : MonoBehaviour
+    public class PlayerAttack : MonoBehaviour, IPowerable
     {
         public event Action<bool> OnAttack;
 
@@ -67,6 +68,11 @@ namespace BlobInvasion.Player
         {
             _weapon = weapon;
             _attackZone.radius = _weapon.AttackZoneRadius;
+        }
+
+        public void ApplyPowerUp(params object[] param)
+        {
+            _weapon.ApplyDamageUp((int) param[0]);
         }
     }
 }

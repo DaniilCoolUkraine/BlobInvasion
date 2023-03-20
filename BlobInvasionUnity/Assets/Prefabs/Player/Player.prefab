@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 3729824718455058179}
   _playerAttack: {fileID: 3729824718599055217}
+  _playerCollector: {fileID: 3729824718455058204}
   _animationController: {fileID: 3729824718455058181}
 --- !u!114 &3729824718455058181
 MonoBehaviour:
@@ -220,7 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthData: {fileID: 11400000, guid: 17b343ed4cc204bbd84572f2d2e88d71, type: 2}
-  _dieParticles: {fileID: 19819134, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
+  _dieParticles:
+  - {fileID: 19819134, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
 --- !u!1 &3729824718599055223
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +420,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight_Golden_Male
       objectReference: {fileID: 0}
+    - target: {fileID: 1630794972795428178, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 983c6ceb84eab3b42bc646dc6544f74c, type: 2}
+    - target: {fileID: 1630794972795428178, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dae90b39af08ea046b04adbb8c6177b2, type: 2}
+    - target: {fileID: 1630794972795428178, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0476c49a1eccdc418f2fcbea3fe03f7, type: 2}
+    - target: {fileID: 1630794972795428178, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 569d3b606d314f147ab860970d2313c1, type: 2}
+    - target: {fileID: 1630794972795428178, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a1f88425bbdedd4d8a434762bfadf52, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aea23af51ddf22b45b7c2df1d87922d0, type: 3}
 --- !u!4 &617061466591276538 stripped
@@ -704,6 +726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 3729824718455058178}
     - target: {fileID: 7989120306301310200, guid: 210510cc6e7e59f4f94c345d54950eec, type: 3}
       propertyPath: _hitPoints
       value: 

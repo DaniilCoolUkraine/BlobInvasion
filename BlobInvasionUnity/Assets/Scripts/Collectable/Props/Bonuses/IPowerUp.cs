@@ -1,9 +1,7 @@
-﻿using System.Collections;
-
-namespace BlobInvasion.Collectable.Props.Bonuses
+﻿namespace BlobInvasion.Collectable.Props.Bonuses
 {
     public interface IPowerUp
     {
-        public void ApplyPowerUp();
+        public void UsePowerUp(IPowerable powerable);
     }
 }

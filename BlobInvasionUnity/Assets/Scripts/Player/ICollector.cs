@@ -1,9 +1,9 @@
-﻿using BlobInvasion.Collectable;
+﻿using UnityEngine;
 
 namespace BlobInvasion.Player
 {
     public interface ICollector
     {
-        public void Collect(ICollectable collectable);
+        public void Collect(GameObject collectableGameObject);
     }
 }
