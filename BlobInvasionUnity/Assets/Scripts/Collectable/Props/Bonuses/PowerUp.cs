@@ -10,6 +10,8 @@ namespace BlobInvasion.Collectable.Props.Bonuses
         public override void Collect(GameObject collector)
         {
             IsCollected = true;
+
+            SpawnParticles(_collectParticles);
             
             _meshRenderer.enabled = false;
             _collider.enabled = false;

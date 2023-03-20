@@ -8,7 +8,7 @@ namespace BlobInvasion.Collectable.Props
     {
         public event Action<bool> OnCollected;
         
-        [SerializeField] private ParticleSystem[] _collectParticles;
+        [SerializeField] protected ParticleSystem[] _collectParticles;
         
         private bool _isColected = false;
         public bool IsCollected
@@ -28,7 +28,7 @@ namespace BlobInvasion.Collectable.Props
             Destroy(gameObject);
         }
         
-        private void SpawnParticles(ParticleSystem[] particles)
+        protected void SpawnParticles(ParticleSystem[] particles)
         {
             var particle = Instantiate(particles[Random.Range(0, particles.Length)],
                 transform.position + Vector3.up, Quaternion.identity);

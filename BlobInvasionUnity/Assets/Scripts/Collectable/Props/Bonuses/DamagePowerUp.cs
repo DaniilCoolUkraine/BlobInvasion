@@ -10,6 +10,9 @@ namespace BlobInvasion.Collectable.Props.Bonuses
         
         public override void UsePowerUp(IPowerable powerable)
         {
+            if (powerable == null)
+                return;
+            
             StartCoroutine(DamageUp(powerable));
         }
         
