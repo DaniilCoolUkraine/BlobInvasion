@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e4e1ab27350488b899ad7c6729523fe, type: 3}
-  m_Name: CoinRainPowerUp
+  m_Script: {fileID: 11500000, guid: da6b8c7c8c8e40ec9caa9416048eb9ed, type: 3}
+  m_Name: MagnetPowerUp
   m_EditorClassIdentifier: 
   _powerMultiplier: 10
-  _poweringTime: 0.3
-  _coin: {fileID: 2938946682655123237, guid: 03d29f3f381f00b4087d493cedb94a74, type: 3}
-  _explosionStrength: 10
+  _poweringTime: 5
+  _playerCollector: {fileID: 3729824718455058189, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}

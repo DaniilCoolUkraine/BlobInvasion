@@ -1,4 +1,5 @@
 ﻿using System;
+using BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects;
 using UnityEngine;
 
 namespace BlobInvasion.Collectable
