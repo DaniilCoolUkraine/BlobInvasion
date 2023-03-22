@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects;
-using BlobInvasion.Player;
 using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
@@ -14,9 +13,9 @@ namespace BlobInvasion.Collectable.Props.Bonuses
             _coinRainPowerUpDataSO = (CoinRainPowerUpDataSO) _powerUpData;
         }
 
-        protected override IEnumerator PowerUpCharacteristic(PlayerController playerController)
+        protected override IEnumerator DoPowerUp(IPowerable powerable)
         {
-            for (int i = 0; i < _coinRainPowerUpDataSO.PowerMultiplier; i++)
+            for (int i = 0; i < _coinRainPowerUpDataSO.CharacteristicMultiplier; i++)
             {
                 yield return new WaitForSeconds(_coinRainPowerUpDataSO.PoweringTime);
                 

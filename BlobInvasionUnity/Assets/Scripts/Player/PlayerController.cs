@@ -6,6 +6,8 @@ namespace BlobInvasion.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private PowerUpBinder _powerUpBinder;
+        
         [SerializeField] private MoveByPhysicsJoysticController _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
 
@@ -41,7 +43,8 @@ namespace BlobInvasion.Player
 
             if (powerUp != null)
             {
-                powerUp.UsePowerUp(this);
+                IPowerable powerable = _powerUpBinder.GetPowerUp(powerUp.Type);
+                powerUp.UsePowerUp(powerable);
             }
         }
     }

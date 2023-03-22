@@ -6,11 +6,9 @@ namespace BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects
     public class CoinRainPowerUpDataSO : PowerUpDataSO
     {
         [SerializeField] private GameObject _coin;
-
         [SerializeField] private float _explosionStrength;
        
         public GameObject Coin => _coin;
-        
         public float ExplosionStrength => _explosionStrength;
         
     }

@@ -8,6 +8,7 @@ namespace BlobInvasion.Player
     public class MoveByPhysicsJoysticController : MonoBehaviour, IPowerable
     {
         public event Action<bool> OnPlayerMove;
+        public bool IsActive { get; set; }
 
         [SerializeField] private float _speed;
         [SerializeField] private bool _isMove = true;
@@ -36,11 +37,6 @@ namespace BlobInvasion.Player
         protected virtual void OnDisable()
         {
              _joystick.OnInterract -= SetActive;
-        }
-
-        public void ApplyPowerUp(params object[] param)
-        {
-            _speed += (int) param[0];
         }
         
         protected virtual void SetActive(bool isActive)
@@ -134,6 +130,26 @@ namespace BlobInvasion.Player
                     _rigidbody.angularVelocity = angular;
                 }
             }
+        }
+        
+        public void Apply(params object[] param)
+        {
+            if (param == null || param.Length == 0 || !(param[0] is float))
+            {
+                return;
+            }
+            
+            _speed += (int) param[0];
+        }
+
+        public void Discard(params object[] param)
+        {
+            if (param == null || param.Length == 0 || !(param[0] is float))
+            {
+                return;
+            }
+            
+            _speed -= (int) param[0];
         }
     }
 }

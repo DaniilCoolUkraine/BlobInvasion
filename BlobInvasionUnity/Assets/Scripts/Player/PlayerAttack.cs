@@ -9,6 +9,7 @@ namespace BlobInvasion.Player
     public class PlayerAttack : MonoBehaviour, IPowerable
     {
         public event Action<bool> OnAttack;
+        public bool IsActive { get; set; }
 
         [SerializeField] private SphereCollider _attackZone;
        
@@ -69,10 +70,25 @@ namespace BlobInvasion.Player
             _weapon = weapon;
             _attackZone.radius = _weapon.AttackZoneRadius;
         }
-
-        public void ApplyPowerUp(params object[] param)
+        
+        public void Apply(params object[] param)
         {
+            if (param == null || param.Length == 0 || !(param[0] is float))
+            {
+                return;
+            }
+            
             _weapon.ApplyDamageUp((int) param[0]);
+        }
+
+        public void Discard(params object[] param)
+        {
+            if (param == null || param.Length == 0 || !(param[0] is float))
+            {
+                return;
+            }
+            
+            _weapon.ApplyDamageUp(-(int) param[0]);
         }
     }
 }

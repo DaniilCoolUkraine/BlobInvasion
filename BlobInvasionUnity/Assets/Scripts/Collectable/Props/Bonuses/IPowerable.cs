@@ -2,6 +2,8 @@
 {
     public interface IPowerable
     {
-        public void ApplyPowerUp(params object[] param);
+        public bool IsActive { get; set; }
+        public void Apply(params object[] param);
+        public void Discard(params object[] param);
     }
 }

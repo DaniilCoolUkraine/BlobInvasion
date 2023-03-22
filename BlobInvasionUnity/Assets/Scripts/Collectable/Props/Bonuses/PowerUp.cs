@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects;
-using BlobInvasion.Player;
 using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
@@ -10,9 +9,14 @@ namespace BlobInvasion.Collectable.Props.Bonuses
         [SerializeField] protected MeshRenderer _meshRenderer;
         [SerializeField] protected Collider _collider;
 
-        [Space(10)]
+        [Space(10)] 
         
         [SerializeField] protected PowerUpDataSO _powerUpData;
+        
+        [SerializeField] protected PowerUpType _type;
+        public PowerUpType Type => _type;
+
+        private Coroutine _doPowerUpCoroutine;
         
         public override void Collect(GameObject collector)
         {
@@ -24,14 +28,21 @@ namespace BlobInvasion.Collectable.Props.Bonuses
             _collider.enabled = false;
         }
 
-        public virtual void UsePowerUp(PlayerController playerController)
+        public virtual void UsePowerUp(IPowerable powerable)
         {
-            if (playerController == null)
+            if (powerable == null)
+            {
                 return;
+            }
             
-            StartCoroutine(PowerUpCharacteristic(playerController));
+            if (_doPowerUpCoroutine != null)
+            {
+                StopCoroutine(_doPowerUpCoroutine);
+            }
+            
+            _doPowerUpCoroutine = StartCoroutine(DoPowerUp(powerable));
         }
 
-        protected abstract IEnumerator PowerUpCharacteristic(PlayerController playerController);
+        protected abstract IEnumerator DoPowerUp(IPowerable powerable);
     }
 }
