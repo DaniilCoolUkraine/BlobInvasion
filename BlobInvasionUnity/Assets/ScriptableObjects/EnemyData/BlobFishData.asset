@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07cc4489f3048d48d3eff97f6841795, type: 3}
-  m_Name: BirbHealthData
+  m_Script: {fileID: 11500000, guid: 62cac711874d4840afef8d59e0148b97, type: 3}
+  m_Name: BlobFishData
   m_EditorClassIdentifier: 
-  _maxHp: 3
+  _enemyPrefab: {fileID: 1814306036429383248, guid: e237c60feed45874dbf952017fced067, type: 3}
+  _enemyWeight: 4

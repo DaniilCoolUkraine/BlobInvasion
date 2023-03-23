@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 32d7c63a53354b7fa012222b4ce23d57, type: 3}
-  m_Name: _EnemyMarket
+  m_Name: _EnemyMarketYellow
   m_EditorClassIdentifier: 
   _enemies:
-  - {fileID: 11400000, guid: 68fb634c0869c30478fc4ed2edb3623f, type: 2}
-  - {fileID: 11400000, guid: dbdca3920fbe2fd479af3a4f8c5cb6e1, type: 2}
-  - {fileID: 11400000, guid: 68415072efa07be419a0c5653ead26a8, type: 2}
+  - {fileID: 11400000, guid: 6a22887878467c74aa3af40490c1df6c, type: 2}
+  - {fileID: 11400000, guid: 97ae5bdc626c2b94c8af62789c198174, type: 2}
