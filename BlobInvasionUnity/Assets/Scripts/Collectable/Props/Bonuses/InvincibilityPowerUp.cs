@@ -6,7 +6,7 @@ namespace BlobInvasion.Collectable.Props.Bonuses
 {
     public class InvincibilityPowerUp : PowerUp
     {
-        protected override IEnumerator PowerUpCharacteristic(PlayerController playerController)
+        protected override IEnumerator DoPowerUpCharacteristic(PlayerController playerController)
         {
             playerController.PlayerHealth.ApplyPowerUp(-_powerUpData.PowerMultiplier);
             

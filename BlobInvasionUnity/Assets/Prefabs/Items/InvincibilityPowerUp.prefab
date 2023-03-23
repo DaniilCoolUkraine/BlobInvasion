@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6964836249406738261}
   - component: {fileID: 6964836249406738262}
   - component: {fileID: 6964836249406738263}
-  - component: {fileID: 6964836249406738256}
+  - component: {fileID: 6559935513141395028}
   - component: {fileID: 8131494056951014893}
   m_Layer: 0
   m_Name: InvincibilityPowerUp
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6964836249406738256
-BoxCollider:
+--- !u!135 &6559935513141395028
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22252806, y: 0.39701697, z: 0.080000006}
-  m_Center: {x: 0, y: -0.0011450946, z: 0}
+  m_Radius: 0.19957167
+  m_Center: {x: -0.000000022351742, y: 0.00030011684, z: 0}
 --- !u!114 &8131494056951014893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,5 +113,5 @@ MonoBehaviour:
   _collectParticles:
   - {fileID: 19848222, guid: e4fc72c1b3da74d4697708bcd2a9db60, type: 3}
   _meshRenderer: {fileID: 6964836249406738263}
-  _collider: {fileID: 6964836249406738256}
+  _collider: {fileID: 6559935513141395028}
   _powerUpData: {fileID: 11400000, guid: f83c2a1dfb6756445be15be2f3f31085, type: 2}

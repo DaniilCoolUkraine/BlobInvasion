@@ -15,3 +15,4 @@ MonoBehaviour:
   _powerMultiplier: 10
   _poweringTime: 5
   _playerCollector: {fileID: 3729824718455058189, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
+  _magnetStrength: 7

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3770883699955910262}
   - component: {fileID: 3770883699955910261}
   - component: {fileID: 3770883699955910260}
-  - component: {fileID: 3770883699955910259}
+  - component: {fileID: -9142206590681793832}
   - component: {fileID: 8926073830973363745}
   m_Layer: 0
   m_Name: SpeedPowerUp
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3770883699955910259
-BoxCollider:
+--- !u!135 &-9142206590681793832
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22252806, y: 0.39701697, z: 0.080000006}
+  m_Radius: 0.19850849
   m_Center: {x: 0, y: -0.0011450946, z: 0}
 --- !u!114 &8926073830973363745
 MonoBehaviour:
@@ -113,5 +113,5 @@ MonoBehaviour:
   _collectParticles:
   - {fileID: 19848222, guid: e4fc72c1b3da74d4697708bcd2a9db60, type: 3}
   _meshRenderer: {fileID: 3770883699955910260}
-  _collider: {fileID: 3770883699955910259}
+  _collider: {fileID: -9142206590681793832}
   _powerUpData: {fileID: 11400000, guid: cfc52eff3b85a244a9be0e8b0548f147, type: 2}

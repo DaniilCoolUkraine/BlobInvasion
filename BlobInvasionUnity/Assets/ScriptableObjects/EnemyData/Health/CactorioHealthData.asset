@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07cc4489f3048d48d3eff97f6841795, type: 3}
   m_Name: CactorioHealthData
   m_EditorClassIdentifier: 
-  _maxHp: 5
+  _maxHp: 8

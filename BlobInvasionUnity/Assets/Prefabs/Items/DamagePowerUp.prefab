@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5556976850548910080}
   - component: {fileID: 5556976850548910083}
   - component: {fileID: 5556976850548910082}
-  - component: {fileID: 5556976850548910085}
+  - component: {fileID: 380726638502816703}
   - component: {fileID: 5556976850548910084}
   m_Layer: 0
   m_Name: DamagePowerUp
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5556976850548910085
-BoxCollider:
+--- !u!135 &380726638502816703
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.27431294, y: 0.3996148, z: 0.08}
+  m_Radius: 0.1998074
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5556976850548910084
 MonoBehaviour:
@@ -113,5 +113,5 @@ MonoBehaviour:
   _collectParticles:
   - {fileID: 19848222, guid: e4fc72c1b3da74d4697708bcd2a9db60, type: 3}
   _meshRenderer: {fileID: 5556976850548910082}
-  _collider: {fileID: 5556976850548910085}
+  _collider: {fileID: 380726638502816703}
   _powerUpData: {fileID: 11400000, guid: 3e7f13d9efe98a843b72ef82762614fa, type: 2}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3485211047363349220}
   - component: {fileID: 3485211047363349223}
   - component: {fileID: 3485211047363349222}
-  - component: {fileID: 3485211047363349217}
+  - component: {fileID: -6971245285950091927}
   - component: {fileID: 7368180157320250617}
   m_Layer: 0
   m_Name: CoinRainPowerUp
@@ -85,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3485211047363349217
-BoxCollider:
+--- !u!135 &-6971245285950091927
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25682068, y: 0.3070826, z: 0.08}
+  m_Radius: 0.1535413
   m_Center: {x: 0.0015866086, y: 0.000000007450581, z: 0}
 --- !u!114 &7368180157320250617
 MonoBehaviour:
@@ -113,5 +113,5 @@ MonoBehaviour:
   _collectParticles:
   - {fileID: 19848222, guid: e4fc72c1b3da74d4697708bcd2a9db60, type: 3}
   _meshRenderer: {fileID: 3485211047363349222}
-  _collider: {fileID: 3485211047363349217}
+  _collider: {fileID: -6971245285950091927}
   _powerUpData: {fileID: 11400000, guid: ec4957ba9646ea942909fce3f9728a6a, type: 2}

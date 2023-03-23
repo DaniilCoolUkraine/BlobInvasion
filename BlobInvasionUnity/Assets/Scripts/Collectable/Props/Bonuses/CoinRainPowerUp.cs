@@ -14,7 +14,7 @@ namespace BlobInvasion.Collectable.Props.Bonuses
             _coinRainPowerUpDataSO = (CoinRainPowerUpDataSO) _powerUpData;
         }
 
-        protected override IEnumerator PowerUpCharacteristic(PlayerController playerController)
+        protected override IEnumerator DoPowerUpCharacteristic(PlayerController playerController)
         {
             for (int i = 0; i < _coinRainPowerUpDataSO.PowerMultiplier; i++)
             {

@@ -8,7 +8,7 @@ namespace BlobInvasion.Collectable.Props.Bonuses
     public abstract class PowerUp : Item, IPowerUp
     {
         [SerializeField] protected MeshRenderer _meshRenderer;
-        [SerializeField] protected Collider _collider;
+        [SerializeField] protected SphereCollider _collider;
 
         [Space(10)]
         
@@ -29,9 +29,9 @@ namespace BlobInvasion.Collectable.Props.Bonuses
             if (playerController == null)
                 return;
             
-            StartCoroutine(PowerUpCharacteristic(playerController));
+            StartCoroutine(DoPowerUpCharacteristic(playerController));
         }
 
-        protected abstract IEnumerator PowerUpCharacteristic(PlayerController playerController);
+        protected abstract IEnumerator DoPowerUpCharacteristic(PlayerController playerController);
     }
 }

@@ -6,7 +6,7 @@ namespace BlobInvasion.Collectable.Props.Bonuses
 {
     public class SpeedPowerUp : PowerUp
     {
-        protected override IEnumerator PowerUpCharacteristic(PlayerController playerController)
+        protected override IEnumerator DoPowerUpCharacteristic(PlayerController playerController)
         {
             playerController.PlayerMovement.ApplyPowerUp(_powerUpData.PowerMultiplier);
 

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BlobCactorioData
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 5047668449138680732, guid: 6fa7d5ffb5868c049b33ceb3668e89f5, type: 3}
-  _enemyWeight: 5
+  _enemyWeight: 7

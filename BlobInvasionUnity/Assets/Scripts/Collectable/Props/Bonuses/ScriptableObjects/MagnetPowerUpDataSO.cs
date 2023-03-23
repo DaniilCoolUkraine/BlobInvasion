@@ -6,6 +6,9 @@ namespace BlobInvasion.Collectable.Props.Bonuses.ScriptableObjects
     public class MagnetPowerUpDataSO: PowerUpDataSO
     {
         [SerializeField] private GameObject _playerCollector;
+        [SerializeField] private float _magnetStrength;
+        
         public GameObject PlayerCollector => _playerCollector;
+        public float MagnetStrength => _magnetStrength;
     }
 }
