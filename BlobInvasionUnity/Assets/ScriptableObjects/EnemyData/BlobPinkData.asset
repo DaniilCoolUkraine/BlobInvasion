@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d7c63a53354b7fa012222b4ce23d57, type: 3}
-  m_Name: _EnemyMarketYellow
+  m_Script: {fileID: 11500000, guid: 62cac711874d4840afef8d59e0148b97, type: 3}
+  m_Name: BlobPinkData
   m_EditorClassIdentifier: 
-  _enemies:
-  - {fileID: 11400000, guid: 6a22887878467c74aa3af40490c1df6c, type: 2}
-  - {fileID: 11400000, guid: 97ae5bdc626c2b94c8af62789c198174, type: 2}
+  _enemyPrefab: {fileID: 7209679427109029829, guid: afac10d658a7ce0438e9f8de94df5df1, type: 3}
+  _enemyWeight: 4

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d7c63a53354b7fa012222b4ce23d57, type: 3}
+  m_Name: _EnemyMarketDesert
+  m_EditorClassIdentifier: 
+  _enemies:
+  - {fileID: 11400000, guid: 6a22887878467c74aa3af40490c1df6c, type: 2}
+  - {fileID: 11400000, guid: 97ae5bdc626c2b94c8af62789c198174, type: 2}
+  - {fileID: 11400000, guid: 71a264208ca1d9a4ab1d26120910079c, type: 2}

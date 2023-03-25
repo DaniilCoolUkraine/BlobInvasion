@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3260905107
+CRC: 2179182494
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1f3b353489d3851b9a1dd917a085f08e
+    Hash: 24b8a13fee20f4b101b167280bbde198
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ad585dd02dfb5016c0dad519eab8f49
@@ -16,5 +16,6 @@ Assets:
 - Assets/AnimationTexture/GreenBlob.bytes
 - Assets/AnimationTexture/Cactoro.bytes
 - Assets/AnimationTexture/Birb.bytes
+- Assets/AnimationTexture/Fish.bytes
 - Assets/AnimationTexture/Alien.bytes
 Dependencies: []
