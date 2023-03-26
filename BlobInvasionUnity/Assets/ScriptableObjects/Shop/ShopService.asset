@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525182f87e444ec1a74c597a9cc84657, type: 3}
+  m_Name: ShopService
+  m_EditorClassIdentifier: 
+  _coins: {fileID: 11400000, guid: 19be5f00145834512ac8a5af765af371, type: 2}
+  _playerSettings: {fileID: 0}
+  _weapons:
+  - {fileID: 11400000, guid: 8ad25373e26eea94cbd65f4bf283edc8, type: 2}
+  - {fileID: 11400000, guid: 3923b543d706bc8498a9422806c923da, type: 2}

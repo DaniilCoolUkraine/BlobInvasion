@@ -163,9 +163,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 3729824718455058179}
   _playerAttack: {fileID: 3729824718599055217}
+  _animationController: {fileID: 3729824718455058181}
   _playerHealth: {fileID: 827658069359843458}
   _playerCollector: {fileID: 3729824718455058204}
-  _animationController: {fileID: 3729824718455058181}
+  _weaponManager: {fileID: 0}
+  _playerSettings: {fileID: 11400000, guid: 2195ca23a24a16e4a89fa412d9c07fe8, type: 2}
 --- !u!114 &3729824718455058181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +550,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3729824718766634636
 MonoBehaviour:
   m_ObjectHideFlags: 0

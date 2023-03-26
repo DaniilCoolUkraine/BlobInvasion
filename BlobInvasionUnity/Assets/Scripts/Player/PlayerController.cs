@@ -1,4 +1,6 @@
-﻿using BlobInvasion.Collectable.Props.Bonuses;
+﻿using System;
+using BlobInvasion.Collectable.Props.Bonuses;
+using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
 using UnityEngine;
 
@@ -6,18 +8,31 @@ namespace BlobInvasion.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [Header("Animatable/powerable")]
+        
         [SerializeField] private MoveByPhysicsJoysticController _playerMovement;
         [SerializeField] private PlayerAttack _playerAttack;
 
+        [SerializeField] private PlayerAnimationController _animationController;
+        
+        [Header("Powerable")]
+     
         [SerializeField] private PlayerHealth _playerHealth;
-
         [SerializeField] private PlayerCollector _playerCollector;
+
+        [Header("Weapons")]
+
+        [SerializeField] private WeaponManager _weaponManager;
+        [SerializeField] private PlayerSettings _playerSettings;
 
         public PlayerAttack PlayerAttack => _playerAttack;
         public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
         public PlayerHealth PlayerHealth => _playerHealth;
-        
-        [SerializeField] private PlayerAnimationController _animationController;
+
+        private void Start()
+        {
+            _weaponManager.CreateWeapon(_playerSettings.CurrentWeapon);
+        }
 
         private void OnEnable()
         {

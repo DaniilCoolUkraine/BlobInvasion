@@ -34,7 +34,7 @@ namespace BlobInvasion.Collectable.Props
                 transform.position + Vector3.up, Quaternion.identity);
             particle.Play();
 
-            Destroy(particle.gameObject, particle.duration);
+            Destroy(particle.gameObject, particle.main.duration);
         }
     }
 }

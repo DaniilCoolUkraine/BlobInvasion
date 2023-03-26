@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 4087aeb9d290f7f498f6799201899330
+  - enabled: 1
     path: Assets/Scenes/WoodsScene.unity
     guid: 448099a0b1681b04480a2714639c39ce
+  - enabled: 1
+    path: Assets/Scenes/DesertScene.unity
+    guid: 7403b4e5309945f48b97334a45d3dadf
+  - enabled: 1
+    path: Assets/Scenes/SnowScene.unity
+    guid: 96610347c0dda5d4297fafacffe898ed
   m_configObjects: {}

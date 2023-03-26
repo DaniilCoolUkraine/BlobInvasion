@@ -7,19 +7,11 @@ namespace BlobInvasion.Collectable.Weapons
     {
         [SerializeField] private Transform _parentBone;
         [SerializeField] private MultiParentConstraint _parentConstraint;
-
-        // todo replace with scriptable object, like enemies
-        [SerializeField] private CollectWeapon[] _weapons;
-
-        private void Start()
+        
+        public void CreateWeapon(Weapon weapon)
         {
-            CreateWeapon();
-        }
-
-        public void CreateWeapon()
-        {
-            CollectWeapon weapon = Instantiate(_weapons[Random.Range(0, _weapons.Length)], new Vector3(-6, 1, -6), Quaternion.identity);
-            weapon.Initialize(_parentBone, _parentConstraint);
+            CollectWeapon collectWeapon = Instantiate(weapon, _parentConstraint.transform.position, Quaternion.identity).GetComponent<CollectWeapon>();
+            collectWeapon.Initialize(_parentBone, _parentConstraint);
         }
     }
 }

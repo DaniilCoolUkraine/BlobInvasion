@@ -158,7 +158,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44682991}
-  m_LocalRotation: {x: 0.3500453, y: -0.000000022793982, z: 0.000000008517826, w: 0.93673277}
+  m_LocalRotation: {x: 0.3500453, y: 0.000000022793984, z: -0.000000008517826, w: 0.93673277}
   m_LocalPosition: {x: -8.31, y: 14.559999, z: -9.940001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2795,7 +2795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283243988}
-  m_LocalRotation: {x: 0.3500453, y: -0.000000022793982, z: 0.000000008517826, w: 0.93673277}
+  m_LocalRotation: {x: 0.3500453, y: 0.000000022793984, z: -0.000000008517826, w: 0.93673277}
   m_LocalPosition: {x: -8.31, y: 14.559999, z: -9.940001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4720,6 +4720,10 @@ PrefabInstance:
       propertyPath: _joystick
       value: 
       objectReference: {fileID: 1350514845}
+    - target: {fileID: 3729824718455058182, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
+      propertyPath: _weaponManager
+      value: 
+      objectReference: {fileID: 1941245030}
     - target: {fileID: 3729824718455058185, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4821,9 +4825,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBone: {fileID: 113579493}
   _parentConstraint: {fileID: 15142644}
-  _weapons:
-  - {fileID: 8830902600193693376, guid: 889ecf8da2e006a439b774a576055bfb, type: 3}
-  - {fileID: -1551862265372749492, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
 --- !u!4 &1949172044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3815457802859345532, guid: 4e8b93c58878244f5a30f335f8c04510, type: 3}

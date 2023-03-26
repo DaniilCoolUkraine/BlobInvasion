@@ -2,11 +2,12 @@
 using BlobInvasion.Collectable.Props.Bonuses;
 using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
+using BlobInvasion.Unlocker;
 using UnityEngine;
 
 namespace BlobInvasion.Player
 {
-    public class PlayerAttack : MonoBehaviour, IPowerable
+    public class PlayerAttack : MonoBehaviour, IPowerable, IUnlocker
     {
         public event Action<bool> OnAttack;
 
@@ -55,15 +56,6 @@ namespace BlobInvasion.Player
             StopAttack();
         }
 
-        private void StopAttack()
-        {
-            _enemyNearCounter = (_enemyNearCounter - 1 < 0) ? 0 :  _enemyNearCounter - 1;
-            if (_enemyNearCounter == 0)
-            {
-                IsAttacking = false;
-            }
-        }
-
         public void SetWeapon(Weapon weapon)
         {
             _weapon = weapon;
@@ -73,6 +65,20 @@ namespace BlobInvasion.Player
         public void ApplyPowerUp(params object[] param)
         {
             _weapon.ApplyDamageUp((int) param[0]);
+        }
+        
+        public void DoUnlock(GameObject unlockable)
+        {
+            SetWeapon(unlockable.GetComponent<Weapon>());
+        }
+        
+        private void StopAttack()
+        {
+            _enemyNearCounter = (_enemyNearCounter - 1 < 0) ? 0 :  _enemyNearCounter - 1;
+            if (_enemyNearCounter == 0)
+            {
+                IsAttacking = false;
+            }
         }
     }
 }
