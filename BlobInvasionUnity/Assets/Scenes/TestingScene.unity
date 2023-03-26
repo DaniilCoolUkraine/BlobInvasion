@@ -671,7 +671,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: 1e-45, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004523, y: -1e-45, z: 1e-45, w: 0.9367328}
   m_LocalPosition: {x: 0, y: 13.73, z: -6.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 1777174661}
-  _enemyMarket: {fileID: 11400000, guid: 746e7d92e87157b4eb8b815853bf906f, type: 2}
+  _enemyMarket: {fileID: 11400000, guid: 6a1dd13b4cb47214da1bcfb35820804d, type: 2}
   _spawningSpots:
   - {fileID: 1334978892}
   _waveWeightCoefficient: 5
@@ -1507,7 +1507,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958472076}
-  m_LocalRotation: {x: 0.35004526, y: -1e-45, z: 1e-45, w: 0.9367328}
+  m_LocalRotation: {x: 0.35004523, y: -1e-45, z: 1e-45, w: 0.9367328}
   m_LocalPosition: {x: 0, y: 13.73, z: -6.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
