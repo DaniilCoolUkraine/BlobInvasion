@@ -10,14 +10,10 @@ namespace BlobInvasion.Collectable.Weapons.ScriptableObjects
         
         [SerializeField] private float _attackRadius;
 
-        [SerializeField] private string _name;
-
         public int Damage => _damage;
         public int AdditionalDamage => _additionalDamage;
         
         public float AttackRadius => _attackRadius;
-
-        public string Name => _name;
         
         public void AddDamage(int additionalDamage)
         {
