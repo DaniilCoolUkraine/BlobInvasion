@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ShopService
   m_EditorClassIdentifier: 
   _coins: {fileID: 11400000, guid: 19be5f00145834512ac8a5af765af371, type: 2}
-  _playerSettings: {fileID: 0}
+  playerSettingsSo: {fileID: 11400000, guid: 2195ca23a24a16e4a89fa412d9c07fe8, type: 2}
   _weapons:
   - {fileID: 11400000, guid: 8ad25373e26eea94cbd65f4bf283edc8, type: 2}
   - {fileID: 11400000, guid: 3923b543d706bc8498a9422806c923da, type: 2}
+  - {fileID: 11400000, guid: 41e1c5eb260105d45a631518c31a45d7, type: 2}

@@ -8,7 +8,7 @@ namespace BlobInvasion.Shop
     {
         [SerializeField] private ScriptableObjectInt _coins;
         
-        [SerializeField] private PlayerSettings _playerSettings;
+        [SerializeField] private PlayerSettingsSO playerSettingsSo;
         
         [SerializeField] private WeaponShopEntitySO[] _weapons;
         public WeaponShopEntitySO[] Weapons => _weapons;
@@ -20,14 +20,14 @@ namespace BlobInvasion.Shop
             if (weapon.IsBuied)
             {
                 isBuied = true;
-                _playerSettings.SetWeapon(weapon.Weapon);
+                playerSettingsSo.SetWeapon(weapon.Weapon);
             }
             else if (_coins.Value.Value >= weapon.Price)
             {
                 _coins.ChangeValue(_coins.Value.Value - weapon.Price, true);
                 
                 isBuied = true;
-                _playerSettings.SetWeapon(weapon.Weapon);
+                playerSettingsSo.SetWeapon(weapon.Weapon);
             }
             
             return isBuied;

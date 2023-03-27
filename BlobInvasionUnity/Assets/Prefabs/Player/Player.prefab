@@ -167,7 +167,7 @@ MonoBehaviour:
   _playerHealth: {fileID: 827658069359843458}
   _playerCollector: {fileID: 3729824718455058204}
   _weaponManager: {fileID: 0}
-  _playerSettings: {fileID: 11400000, guid: 2195ca23a24a16e4a89fa412d9c07fe8, type: 2}
+  playerSettings: {fileID: 11400000, guid: 2195ca23a24a16e4a89fa412d9c07fe8, type: 2}
 --- !u!114 &3729824718455058181
 MonoBehaviour:
   m_ObjectHideFlags: 0

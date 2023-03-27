@@ -23,15 +23,20 @@ namespace BlobInvasion.Player
         [Header("Weapons")]
 
         [SerializeField] private WeaponManager _weaponManager;
-        [SerializeField] private PlayerSettings _playerSettings;
+        [SerializeField] private PlayerSettingsSO playerSettings;
 
         public PlayerAttack PlayerAttack => _playerAttack;
         public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
         public PlayerHealth PlayerHealth => _playerHealth;
 
+        private void Awake()
+        {
+            playerSettings.RestoreSavedWeapon();
+        }
+
         private void Start()
         {
-            _weaponManager.CreateWeapon(_playerSettings.CurrentWeapon);
+            _weaponManager.CreateWeapon(playerSettings.CurrentWeapon);
         }
 
         private void OnEnable()
