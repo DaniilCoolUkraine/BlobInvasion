@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BlobInvasion.UI
 {
@@ -50,7 +51,8 @@ namespace BlobInvasion.UI
 
         public void LoadMenu()
         {
-            Debug.Log("Going to menu");
+            string sceneName = "MainMenuScene";
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
