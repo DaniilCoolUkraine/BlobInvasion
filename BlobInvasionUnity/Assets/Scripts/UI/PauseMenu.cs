@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -25,7 +26,12 @@ namespace BlobInvasion.UI
 
             Pause();
         }
-        
+
+        private void OnDisable()
+        {
+            Time.timeScale = 1f;
+        }
+
         public void Resume()
         {
             IsPaused = false;

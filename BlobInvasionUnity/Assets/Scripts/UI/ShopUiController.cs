@@ -1,5 +1,4 @@
-﻿using System;
-using BlobInvasion.Shop;
+﻿using BlobInvasion.Shop;
 using UnityEngine;
 
 namespace BlobInvasion.UI
@@ -7,9 +6,15 @@ namespace BlobInvasion.UI
     public class ShopUiController : MonoBehaviour
     {
         [SerializeField] private ShopServiceSO _shopServiceSO;
-        [SerializeField] private ShopSlotUiController _prefab;
 
-        [SerializeField] private Transform _weaponHolder;
+        [Space(10)]
+        
+        [SerializeField] private ShopSlotUiController _buySlotPrefab;
+
+        [Space(5)]
+
+        [SerializeField] private Transform _weaponsHolder;
+        [SerializeField] private Transform _levelsHolder;
 
         private void Start()
         {
@@ -22,17 +27,34 @@ namespace BlobInvasion.UI
             
             foreach (var weapon in _shopServiceSO.Weapons)
             {
-                temporarySlot = Instantiate(_prefab, _weaponHolder);
+                temporarySlot = Instantiate(_buySlotPrefab, _weaponsHolder);
                 temporarySlot.Init(weapon);
 
                 temporarySlot.OnTryToBuy += TryToBuy;
             }
+
+            foreach (var level in _shopServiceSO.Levels)
+            {
+                temporarySlot = Instantiate(_buySlotPrefab, _levelsHolder);
+                temporarySlot.Init(level);
+                
+                temporarySlot.OnTryToBuy += TryToBuy;
+            }
         }
         
-        private void TryToBuy(WeaponShopEntitySO weapon)
+        private void TryToBuy(ShopEntitySO shopEntity)
         {
-            bool isBuied = _shopServiceSO.TryBuyWeapon(weapon);
-            weapon.TryToBuy(isBuied);
+            if (shopEntity is WeaponShopEntitySO)
+            {
+                bool isBuied = _shopServiceSO.TryBuyWeapon((WeaponShopEntitySO) shopEntity);
+                shopEntity.TryToBuy(isBuied);
+            }
+
+            if (shopEntity is LevelShopEntitySO)
+            {
+                bool isBuied = _shopServiceSO.TryBuyLevel((LevelShopEntitySO) shopEntity);
+                shopEntity.TryToBuy(isBuied);
+            }
         }
     }
 }

@@ -32,6 +32,7 @@ namespace BlobInvasion.Player
         private void Awake()
         {
             playerSettings.RestoreSavedWeapon();
+            playerSettings.RestoreSavedScene();
         }
 
         private void Start()

@@ -336,8 +336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopServiceSO: {fileID: 11400000, guid: aedc41640e09d754287f185cb3f4b7b0, type: 2}
-  _prefab: {fileID: 9014384354559517390, guid: 16d6ec68aa07a1f4b9903fec1f382c0e, type: 3}
-  _weaponHolder: {fileID: 339244675}
+  _buySlotPrefab: {fileID: 9014384354559517390, guid: 16d6ec68aa07a1f4b9903fec1f382c0e, type: 3}
+  _weaponsHolder: {fileID: 339244675}
+  _levelsHolder: {fileID: 763816456}
 --- !u!1 &339244674
 GameObject:
   m_ObjectHideFlags: 0

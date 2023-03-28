@@ -8,20 +8,20 @@ namespace BlobInvasion.UI
 {
     public class ShopSlotUiController : MonoBehaviour
     {
-        public event Action<WeaponShopEntitySO> OnTryToBuy;
+        public event Action<ShopEntitySO> OnTryToBuy;
 
         [SerializeField] private Image _icon;
         [SerializeField] private TextMeshProUGUI _textMeshPro;
 
         [SerializeField] private Button _button;
 
-        private WeaponShopEntitySO _weapon;
+        private ShopEntitySO _weapon;
         
-        public void Init(WeaponShopEntitySO weaponShopEntity)
+        public void Init(ShopEntitySO weaponShopEntity)
         {
             _weapon = weaponShopEntity;
-            
-            _icon.sprite = weaponShopEntity.WeaponIcon;
+
+            _icon.sprite = weaponShopEntity.Icon;
             SetBuied(_weapon.IsBuied);
 
             _weapon.OnBuied += SetBuied;
@@ -50,7 +50,7 @@ namespace BlobInvasion.UI
             }
             else
             {
-                _textMeshPro.text = $"{_weapon.Name}: {_weapon.Price}";
+                _textMeshPro.text = $"{_weapon.Name} \n {_weapon.Price}";
             }
         }
     }
