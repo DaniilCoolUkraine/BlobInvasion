@@ -226,7 +226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2020843759265331577, guid: 2b30a5c84ccf7094fac36bdb458f0353, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -2020843759265331577, guid: 2b30a5c84ccf7094fac36bdb458f0353, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -254,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1650943498003061328, guid: 2b30a5c84ccf7094fac36bdb458f0353, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1650943498003061328, guid: 2b30a5c84ccf7094fac36bdb458f0353, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -312,24 +312,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5047668447842400669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5390107696410918269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f47bf4169ec5dd4cbf530cf6929eeab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prototype: {fileID: 5390107696410918269}
-  playSpeed: 1
-  shadowCastingMode: 0
-  receiveShadow: 0
-  applyRootMotion: 0
-  bonePerVertex: 4
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &6912762344142592402
 PrefabInstance:
   m_ObjectHideFlags: 0
