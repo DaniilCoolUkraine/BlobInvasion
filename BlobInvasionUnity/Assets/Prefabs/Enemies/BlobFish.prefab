@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8386443432676475171, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8386443432676475171, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5336372665255311950, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5336372665255311950, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048751184280122765, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2048751184280122765, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -310,24 +310,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1814306035856945789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1579879925598687019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f47bf4169ec5dd4cbf530cf6929eeab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prototype: {fileID: 1579879925598687019}
-  playSpeed: 1
-  shadowCastingMode: 0
-  receiveShadow: 0
-  applyRootMotion: 0
-  bonePerVertex: 4
 --- !u!4 &2208748192758289809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55ed571015bddec4ca2fe78f463d7f2c, type: 3}
