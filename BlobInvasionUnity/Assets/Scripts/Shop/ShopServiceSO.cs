@@ -1,5 +1,6 @@
 ﻿using BlobInvasion.Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace BlobInvasion.Shop
 {
@@ -44,6 +45,7 @@ namespace BlobInvasion.Shop
             {
                 isBuied = true;
                 _playerSettingsSO.SetScene(level.Name);
+                SceneManager.LoadScene(level.Name);
             }
             else if (_coins.Value.Value >= level.Price)
             {
@@ -51,6 +53,7 @@ namespace BlobInvasion.Shop
                 
                 isBuied = true;
                 _playerSettingsSO.SetScene(level.Name);
+                SceneManager.LoadScene(level.Name);
             }
             
             return isBuied;
