@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coins: {fileID: 11400000, guid: 19be5f00145834512ac8a5af765af371, type: 2}
   _playerSettingsSO: {fileID: 11400000, guid: 2195ca23a24a16e4a89fa412d9c07fe8, type: 2}
+  _levelSettingsSO: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
   _weapons:
   - {fileID: 11400000, guid: 8ad25373e26eea94cbd65f4bf283edc8, type: 2}
   - {fileID: 11400000, guid: 3923b543d706bc8498a9422806c923da, type: 2}

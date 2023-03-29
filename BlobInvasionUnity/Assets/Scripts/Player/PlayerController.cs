@@ -2,6 +2,7 @@
 using BlobInvasion.Collectable.Props.Bonuses;
 using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
+using BlobInvasion.Settings;
 using UnityEngine;
 
 namespace BlobInvasion.Player
@@ -23,7 +24,8 @@ namespace BlobInvasion.Player
         [Header("Weapons")]
 
         [SerializeField] private WeaponManager _weaponManager;
-        [SerializeField] private PlayerSettingsSO playerSettings;
+        [SerializeField] private PlayerSettingsSO _playerSettings;
+        [SerializeField] private LevelSettingsSO _levelSettings;
 
         public PlayerAttack PlayerAttack => _playerAttack;
         public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
@@ -31,13 +33,13 @@ namespace BlobInvasion.Player
 
         private void Awake()
         {
-            playerSettings.RestoreSavedWeapon();
-            playerSettings.RestoreSavedScene();
+            _playerSettings.RestoreSavedWeapon();
+            _levelSettings.RestoreSavedScene();
         }
 
         private void Start()
         {
-            _weaponManager.CreateWeapon(playerSettings.CurrentWeapon);
+            _weaponManager.CreateWeapon(_playerSettings.CurrentWeapon);
         }
 
         private void OnEnable()

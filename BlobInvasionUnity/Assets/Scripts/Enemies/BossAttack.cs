@@ -7,21 +7,16 @@ namespace BlobInvasion.Enemies
     {
         [SerializeField] private BossAttackDataSO _bossAttackData;
 
+        private IDamageable _damageable;
+
+        public void SetDamageable(IDamageable damageable)
+        {
+            _damageable = damageable;
+        }
+        
         private void Attack()
         {
-            Collider[] colliderInfo = Physics.OverlapSphere(transform.position, _bossAttackData.AttackRadius);
-            
-            foreach (Collider collider in colliderInfo)
-            {
-                IDamageable damageable = collider.transform.GetComponent<IDamageable>();
-                if (damageable == null)
-                    continue;
-
-                if (collider.CompareTag("Player"))
-                {
-                    damageable.TaKeDamage(_bossAttackData.Damage);
-                }
-            }
+            _damageable.TaKeDamage(_bossAttackData.Damage);
         }
     }
 }

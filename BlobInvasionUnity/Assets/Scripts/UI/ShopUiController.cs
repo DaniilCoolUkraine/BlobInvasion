@@ -44,17 +44,9 @@ namespace BlobInvasion.UI
         
         private void TryToBuy(ShopEntitySO shopEntity)
         {
-            if (shopEntity is WeaponShopEntitySO)
-            {
-                bool isBuied = _shopServiceSO.TryBuyWeapon((WeaponShopEntitySO) shopEntity);
-                shopEntity.TryToBuy(isBuied);
-            }
-
-            if (shopEntity is LevelShopEntitySO)
-            {
-                bool isBuied = _shopServiceSO.TryBuyLevel((LevelShopEntitySO) shopEntity);
-                shopEntity.TryToBuy(isBuied);
-            }
+            bool isBuied = _shopServiceSO.TryBuyEntity(shopEntity);
+            
+            shopEntity.TryToBuy(isBuied);
         }
     }
 }

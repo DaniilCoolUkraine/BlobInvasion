@@ -6,7 +6,7 @@ namespace BlobInvasion.Enemies
 {
     public class BossTriggerDetector : MonoBehaviour
     {
-        public event Action<bool> OnTriggered;
+        public event Action<bool, IDamageable> OnTriggered;
 
         [SerializeField] private SphereCollider _attackTrigger;
         [SerializeField] private BossAttackDataSO _bossAttackData;
@@ -21,7 +21,7 @@ namespace BlobInvasion.Enemies
             IDamageable damageable = other.transform.GetComponent<IDamageable>();
             if (damageable != null)
             {
-                OnTriggered?.Invoke(true);   
+                OnTriggered?.Invoke(true, damageable);   
                 damageable.OnDie += () => StopAttack();
             }
         }
@@ -36,7 +36,7 @@ namespace BlobInvasion.Enemies
         
         private void StopAttack()
         {
-            OnTriggered?.Invoke(false);   
+            OnTriggered?.Invoke(false, null);
         }
     }
 }

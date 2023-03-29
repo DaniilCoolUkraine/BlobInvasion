@@ -1,4 +1,5 @@
-﻿using BlobInvasion.Player;
+﻿using System;
+using BlobInvasion.Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ namespace BlobInvasion.Shop
         [SerializeField] private ScriptableObjectInt _coins;
         
         [SerializeField] private PlayerSettingsSO _playerSettingsSO;
+        [SerializeField] private LevelSettingsSO _levelSettingsSO;
         
         [SerializeField] private WeaponShopEntitySO[] _weapons;
         public WeaponShopEntitySO[] Weapons => _weapons;
@@ -17,47 +19,54 @@ namespace BlobInvasion.Shop
         [SerializeField] private LevelShopEntitySO[] _levels;
         public LevelShopEntitySO[] Levels => _levels;
 
-        public bool TryBuyWeapon(WeaponShopEntitySO weapon)
+        public bool TryBuyEntity(ShopEntitySO shopEntity)
         {
             bool isBuied = false;
+            
+            if (shopEntity is WeaponShopEntitySO)
+            {
+                isBuied = TryBuyWeapon((WeaponShopEntitySO) shopEntity);
+            }
+            else if (shopEntity is LevelShopEntitySO)
+            {
+                isBuied = TryBuyLevel((LevelShopEntitySO) shopEntity);
+            }
 
-            if (weapon.IsBuied)
+            return isBuied;
+        }
+        
+        private bool TryBuyEntity(ShopEntitySO shopEntitySO, Action OnBied)
+        {
+            bool isBuied = false;
+            
+            if (shopEntitySO.IsBuied)
             {
                 isBuied = true;
-                _playerSettingsSO.SetWeapon(weapon.Weapon);
+                OnBied?.Invoke();
             }
-            else if (_coins.Value.Value >= weapon.Price)
+            else if (_coins.Value.Value >= shopEntitySO.Price)
             {
-                _coins.ChangeValue(_coins.Value.Value - weapon.Price, true);
+                _coins.ChangeValue(_coins.Value.Value - shopEntitySO.Price, true);
                 
                 isBuied = true;
-                _playerSettingsSO.SetWeapon(weapon.Weapon);
+                OnBied?.Invoke();
             }
             
             return isBuied;
         }
         
-        public bool TryBuyLevel(LevelShopEntitySO level)
+        private bool TryBuyWeapon(WeaponShopEntitySO weapon)
         {
-            bool isBuied = false;
-
-            if (level.IsBuied)
-            {
-                isBuied = true;
-                _playerSettingsSO.SetScene(level.Name);
-                SceneManager.LoadScene(level.Name);
-            }
-            else if (_coins.Value.Value >= level.Price)
-            {
-                _coins.ChangeValue(_coins.Value.Value - level.Price, true);
-                
-                isBuied = true;
-                _playerSettingsSO.SetScene(level.Name);
-                SceneManager.LoadScene(level.Name);
-            }
-            
-            return isBuied;
+            return TryBuyEntity(weapon, () => _playerSettingsSO.SetWeapon(weapon.Weapon));
         }
         
+        private bool TryBuyLevel(LevelShopEntitySO level)
+        {
+            return TryBuyEntity(level, () =>
+            {
+                _levelSettingsSO.SetScene(level.Name);
+                SceneManager.LoadScene(level.Name);
+            });
+        }
     }
 }
