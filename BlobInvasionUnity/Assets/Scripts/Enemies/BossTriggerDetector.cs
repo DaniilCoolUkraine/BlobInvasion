@@ -18,18 +18,25 @@ namespace BlobInvasion.Enemies
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.transform.GetComponent<IDamageable>() != null)
+            IDamageable damageable = other.transform.GetComponent<IDamageable>();
+            if (damageable != null)
             {
                 OnTriggered?.Invoke(true);   
+                damageable.OnDie += () => StopAttack();
             }
         }
-        
+
         private void OnTriggerExit(Collider other)
         {
             if (other.transform.GetComponent<IDamageable>() != null)
             {
-                OnTriggered?.Invoke(false);   
+                StopAttack();
             }
+        }
+        
+        private void StopAttack()
+        {
+            OnTriggered?.Invoke(false);   
         }
     }
 }

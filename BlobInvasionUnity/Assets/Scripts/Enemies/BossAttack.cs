@@ -16,8 +16,11 @@ namespace BlobInvasion.Enemies
                 IDamageable damageable = collider.transform.GetComponent<IDamageable>();
                 if (damageable == null)
                     continue;
-                
-                damageable.TaKeDamage(_bossAttackData.Damage);
+
+                if (collider.CompareTag("Player"))
+                {
+                    damageable.TaKeDamage(_bossAttackData.Damage);
+                }
             }
         }
     }

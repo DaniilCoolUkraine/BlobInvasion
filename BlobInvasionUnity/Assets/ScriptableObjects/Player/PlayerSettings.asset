@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 8257618654561705080, guid: e5233bed80ff0aa4a9116cde9c77c51f, type: 3}
   - {fileID: 8830902600193693382, guid: 889ecf8da2e006a439b774a576055bfb, type: 3}
   - {fileID: 5313519925106872080, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
-  _currentWeapon: {fileID: 8257618654561705080, guid: e5233bed80ff0aa4a9116cde9c77c51f, type: 3}
+  _currentWeapon: {fileID: 5313519925106872080, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
   _scenes:
   - WoodsScene
   - DesertScene

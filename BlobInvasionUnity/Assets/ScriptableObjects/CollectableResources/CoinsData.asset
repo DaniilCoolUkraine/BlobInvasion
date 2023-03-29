@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value:
     _name: PlayerCurrentCoins
-    _value: 8
+    _value: 0
   _minValue:
     _name: PlayerMinimumCoins
     _value: 0
