@@ -8,6 +8,8 @@ namespace BlobInvasion.Settings
     {
         [SerializeField] private string[] _scenes;
         [SerializeField] private string _currentScene;
+
+        public string CurrentScene => _currentScene;
         
         private string _savedSceneKey = "PLAYER_SELECTED_SCENE";
         

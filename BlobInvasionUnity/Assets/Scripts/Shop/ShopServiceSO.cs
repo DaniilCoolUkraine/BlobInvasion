@@ -64,8 +64,8 @@ namespace BlobInvasion.Shop
         {
             return TryBuyEntity(level, () =>
             {
-                _levelSettingsSO.SetScene(level.Name);
-                SceneManager.LoadScene(level.Name);
+                _levelSettingsSO.SetScene(level.SceneName);
+                SceneManager.LoadScene(level.SceneName);
             });
         }
     }

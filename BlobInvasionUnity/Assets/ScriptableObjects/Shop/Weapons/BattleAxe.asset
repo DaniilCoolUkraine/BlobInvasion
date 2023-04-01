@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BattleAxe
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 2c3e1dd5a3bfae24f8e655bb5aad84a9, type: 3}
-  _price: 5
-  _name: Battle Axe
+  _price: 150
+  _displayingName: Battle Axe
   _weaponPrefab: {fileID: 8830902600193693382, guid: 889ecf8da2e006a439b774a576055bfb, type: 3}

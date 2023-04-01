@@ -11,7 +11,8 @@ namespace BlobInvasion.UI
         public event Action<ShopEntitySO> OnTryToBuy;
 
         [SerializeField] private Image _icon;
-        [SerializeField] private TextMeshProUGUI _textMeshPro;
+        [SerializeField] private TextMeshProUGUI _name;
+        [SerializeField] private TextMeshProUGUI _price;
 
         [SerializeField] private Button _button;
 
@@ -46,11 +47,13 @@ namespace BlobInvasion.UI
         {
             if (isBuied)
             {
-                _textMeshPro.text = $"{_weapon.Name}";
+                _name.text = $"{_weapon.Name}";
+                _price.enabled = false;
             }
             else
             {
-                _textMeshPro.text = $"{_weapon.Name} \n {_weapon.Price}";
+                _name.text = _weapon.Name;
+                _price.text = _weapon.Price.ToString();
             }
         }
     }

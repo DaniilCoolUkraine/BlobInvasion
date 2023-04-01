@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce50c654656d45d0b2ce1d86e3c820de, type: 3}
   m_Name: SnowLevel
   m_EditorClassIdentifier: 
-  _icon: {fileID: 21300000, guid: 2a1f3cba20f3e11498474a705db12fde, type: 3}
-  _price: 50
-  _name: SnowScene
+  _icon: {fileID: 21300000, guid: 782812c7c5c75404e956bd6212727bb5, type: 3}
+  _price: 200
+  _displayingName: Snow peak
+  _sceneName: SnowScene

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 77cdde7c4a7b1a24eb075bc0b7b28e0d, type: 3}
-  _price: 2
-  _name: Axe
+  _price: 50
+  _displayingName: Axe
   _weaponPrefab: {fileID: 8257618654561705080, guid: e5233bed80ff0aa4a9116cde9c77c51f, type: 3}
