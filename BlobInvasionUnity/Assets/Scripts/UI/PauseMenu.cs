@@ -11,7 +11,9 @@ namespace BlobInvasion.UI
         public bool IsPaused { get; private set; } = false;
 
         [SerializeField] private GameObject _pauseMenu;
+        
         [SerializeField] private GameObject _looseScreen;
+        [SerializeField] private GameObject _winScreen;
         
         [SerializeField] private GameObject _joystickCanvas;
         
@@ -27,6 +29,16 @@ namespace BlobInvasion.UI
             Time.timeScale = 0f;
             
             _looseScreen.SetActive(true);
+            _joystickCanvas.SetActive(false);
+        }
+        
+        public void EnableWinScreen()
+        {
+            IsPaused = true;
+            OnPaused?.Invoke(true);
+            Time.timeScale = 0f;
+            
+            _winScreen.SetActive(true);
             _joystickCanvas.SetActive(false);
         }
         

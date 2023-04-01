@@ -10,13 +10,14 @@ namespace BlobInvasion.Player
     public class PlayerAttack : MonoBehaviour, IPowerable, IUnlocker
     {
         public event Action<bool> OnAttack;
+        public event Action OnGoalReached;
 
         [SerializeField] private SphereCollider _attackZone;
        
         private Weapon _weapon;
 
         private int _enemyNearCounter = 0;
-        
+
         private bool _isAttacking;
         public bool IsAttacking
         {
@@ -28,6 +29,20 @@ namespace BlobInvasion.Player
             }
         }
         
+        private int _enemyKilled = 0;
+        private int EnemyKilled
+        {
+            get => _enemyKilled;
+            set
+            {
+                _enemyKilled = value;
+                if (_enemyKilled >= 30)
+                {
+                    OnGoalReached?.Invoke();
+                }
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             var damageable = other.GetComponent<IDamageable>();
@@ -37,10 +52,13 @@ namespace BlobInvasion.Player
                 return;
             }
             
-            damageable.OnDie += () => StopAttack();
+            damageable.OnDie += () =>
+            {
+                StopAttack();
+                EnemyKilled += 1;
+            };
 
             IsAttacking = true;
-
             _enemyNearCounter++;
         }
         
