@@ -13,6 +13,5 @@ namespace BlobInvasion.Damageable
             }
             this.enabled = false;
         }
-
     }
 }

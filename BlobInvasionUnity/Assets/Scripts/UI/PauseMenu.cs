@@ -6,48 +6,48 @@ namespace BlobInvasion.UI
 {
     public class PauseMenu : MonoBehaviour
     {
+        public event Action<bool> OnPaused;
+        
         public bool IsPaused { get; private set; } = false;
 
         [SerializeField] private GameObject _pauseMenu;
+        [SerializeField] private GameObject _looseScreen;
+        
         [SerializeField] private GameObject _joystickCanvas;
         
-        private void Update()
-        {
-            if (!Input.GetKeyDown(KeyCode.Escape))
-            {
-                return;
-            }
-            
-            if (IsPaused)
-            {
-                Resume();
-                return;
-            }
-
-            Pause();
-        }
-
         private void OnDisable()
         {
             Time.timeScale = 1f;
         }
 
-        public void Resume()
+        public void EnableLooseScreen()
         {
-            IsPaused = false;
-            Time.timeScale = 1f;
+            IsPaused = true;
+            OnPaused?.Invoke(true);
+            Time.timeScale = 0f;
             
-            _pauseMenu.SetActive(false);
-            _joystickCanvas.SetActive(true);
+            _looseScreen.SetActive(true);
+            _joystickCanvas.SetActive(false);
         }
         
         public void Pause()
         {
             IsPaused = true;
+            OnPaused?.Invoke(true);
             Time.timeScale = 0f;
             
             _pauseMenu.SetActive(true);
             _joystickCanvas.SetActive(false);
+        }
+        
+        public void Resume()
+        {
+            IsPaused = false;
+            OnPaused?.Invoke(false);
+            Time.timeScale = 1f;
+            
+            _pauseMenu.SetActive(false);
+            _joystickCanvas.SetActive(true);
         }
 
         public void Quit()
@@ -59,6 +59,11 @@ namespace BlobInvasion.UI
         {
             string sceneName = "MainMenuScene";
             SceneManager.LoadScene(sceneName);
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

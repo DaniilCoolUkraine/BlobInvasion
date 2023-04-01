@@ -16,4 +16,4 @@ MonoBehaviour:
   - DesertScene
   - WoodsScene
   - SnowScene
-  _currentScene: 
+  _currentScene: WoodsScene

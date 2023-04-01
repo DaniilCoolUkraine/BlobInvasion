@@ -1,8 +1,8 @@
-﻿using System;
-using BlobInvasion.Collectable.Props.Bonuses;
+﻿using BlobInvasion.Collectable.Props.Bonuses;
 using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
 using BlobInvasion.Settings;
+using BlobInvasion.UI;
 using UnityEngine;
 
 namespace BlobInvasion.Player
@@ -27,6 +27,10 @@ namespace BlobInvasion.Player
         [SerializeField] private PlayerSettingsSO _playerSettings;
         [SerializeField] private LevelSettingsSO _levelSettings;
 
+        [Header("UI")] 
+        
+        [SerializeField] private PauseMenu _pauseMenu;
+
         public PlayerAttack PlayerAttack => _playerAttack;
         public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
         public PlayerHealth PlayerHealth => _playerHealth;
@@ -48,6 +52,8 @@ namespace BlobInvasion.Player
             _playerAttack.OnAttack += _animationController.PlayAttackAnimation;
 
             _playerCollector.OnCollected += OnCollected;
+
+            _playerHealth.OnDie += _pauseMenu.EnableLooseScreen;
         }
 
         private void OnDisable()
@@ -56,6 +62,8 @@ namespace BlobInvasion.Player
             _playerAttack.OnAttack -= _animationController.PlayAttackAnimation;
             
             _playerCollector.OnCollected -= OnCollected;
+            
+            _playerHealth.OnDie -= _pauseMenu.EnableLooseScreen;
         }
 
         private void OnCollected(GameObject collectedGameObject)
