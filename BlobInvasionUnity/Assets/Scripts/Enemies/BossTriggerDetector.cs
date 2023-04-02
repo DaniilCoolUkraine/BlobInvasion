@@ -22,7 +22,7 @@ namespace BlobInvasion.Enemies
             if (damageable != null)
             {
                 OnTriggered?.Invoke(true, damageable);   
-                damageable.OnDie += () => StopAttack();
+                damageable.OnHealthIsZero += () => StopAttack();
             }
         }
 

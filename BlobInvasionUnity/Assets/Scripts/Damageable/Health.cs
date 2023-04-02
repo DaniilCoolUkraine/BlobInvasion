@@ -18,7 +18,7 @@ namespace BlobInvasion.Damageable
             _currentHp = _healthData.MaxHp;
         }
 
-        public event Action OnDie;
+        public event Action OnHealthIsZero;
         public event Action<float, float> OnDamageTaken;
 
         public virtual void TaKeDamage(int damage)
@@ -32,7 +32,7 @@ namespace BlobInvasion.Damageable
 
         protected virtual void Die()
         {
-            OnDie?.Invoke();
+            OnHealthIsZero?.Invoke();
 
             SpawnParticles(_dieParticles);
                 

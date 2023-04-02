@@ -52,7 +52,7 @@ namespace BlobInvasion.Player
                 return;
             }
             
-            damageable.OnDie += () =>
+            damageable.OnHealthIsZero += () =>
             {
                 StopAttack();
                 EnemyKilled += 1;

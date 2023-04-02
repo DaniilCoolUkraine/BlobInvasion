@@ -169,6 +169,8 @@ MonoBehaviour:
   _weaponManager: {fileID: 0}
   _playerSettings: {fileID: 11400000, guid: 2195ca23a24a16e4a89fa412d9c07fe8, type: 2}
   _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _playerDieEvent: {fileID: 11400000, guid: ede1da11fc6c51d43b64dc9ce2e619b2, type: 2}
+  _enemyWaveSpawners: []
 --- !u!114 &3729824718455058181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +229,6 @@ MonoBehaviour:
   _healthData: {fileID: 11400000, guid: 17b343ed4cc204bbd84572f2d2e88d71, type: 2}
   _dieParticles:
   - {fileID: 19819134, guid: e73000b12fb76244cbffd6abbf8bb6e4, type: 3}
-  _looseScreen: {fileID: 0}
 --- !u!1 &3729824718599055223
 GameObject:
   m_ObjectHideFlags: 0
