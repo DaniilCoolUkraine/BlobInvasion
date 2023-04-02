@@ -4,7 +4,6 @@ using BlobInvasion.Damageable;
 using BlobInvasion.Enemies.Spawner;
 using BlobInvasion.ScriptableObjects;
 using BlobInvasion.Settings;
-using BlobInvasion.UI;
 using UnityEngine;
 
 namespace BlobInvasion.Player
@@ -22,13 +21,7 @@ namespace BlobInvasion.Player
      
         [SerializeField] private PlayerHealth _playerHealth;
         [SerializeField] private PlayerCollector _playerCollector;
-
-        [Header("Weapons")]
-
-        [SerializeField] private WeaponManager _weaponManager;
-        [SerializeField] private PlayerSettingsSO _playerSettings;
-        [SerializeField] private LevelSettingsSO _levelSettings;
-
+        
         [Header("Events")] 
         [SerializeField] private ScriptableObjectEvent _playerDieEvent;
         
@@ -39,18 +32,7 @@ namespace BlobInvasion.Player
         public PlayerAttack PlayerAttack => _playerAttack;
         public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
         public PlayerHealth PlayerHealth => _playerHealth;
-
-        private void Awake()
-        {
-            _playerSettings.RestoreSavedWeapon();
-            _levelSettings.RestoreSavedScene();
-        }
-
-        private void Start()
-        {
-            _weaponManager.CreateWeapon(_playerSettings.CurrentWeapon);
-        }
-
+        
         private void OnEnable()
         {
             _playerMovement.OnPlayerMove += _animationController.PlayMovementAnimation;

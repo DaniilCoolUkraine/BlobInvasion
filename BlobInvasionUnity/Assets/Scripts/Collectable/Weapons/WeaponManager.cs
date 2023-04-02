@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BlobInvasion.Settings;
+using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
 namespace BlobInvasion.Collectable.Weapons
@@ -7,6 +8,13 @@ namespace BlobInvasion.Collectable.Weapons
     {
         [SerializeField] private Transform _parentBone;
         [SerializeField] private MultiParentConstraint _parentConstraint;
+        
+        [SerializeField] private PlayerSettingsSO _playerSettings;
+        
+        private void Start()
+        {
+            CreateWeapon(_playerSettings.CurrentWeapon);
+        }
         
         public void CreateWeapon(Weapon weapon)
         {
