@@ -1,30 +1,20 @@
 ﻿using System.Collections;
-using BlobInvasion.Collectable.Weapons.ScriptableObjects;
+using BlobInvasion.Player;
 using UnityEngine;
 
 namespace BlobInvasion.Collectable.Props.Bonuses
 {
     public class DamagePowerUp : PowerUp
     {
-        [SerializeField] private WeaponDataSO[] _weapons;
-        
-        [SerializeField] private int _additionalDamage;
-        [SerializeField] private float _time;
-        
-        public override void ApplyPowerUp()
+        protected override IEnumerator DoPowerUpCharacteristic(PlayerController playerController)
         {
-            StartCoroutine(DamageUp());
-        }
+            playerController.PlayerAttack.ApplyPowerUp(_powerUpData.PowerMultiplier);
 
-        private IEnumerator DamageUp()
-        {
-            foreach (WeaponDataSO weapon in _weapons)
-                weapon.AddDamage(_additionalDamage);
+            yield return new WaitForSeconds(_powerUpData.PoweringTime);
+
+            playerController.PlayerAttack.ApplyPowerUp(-_powerUpData.PowerMultiplier);
             
-            yield return new WaitForSeconds(_time);
-
-            foreach (WeaponDataSO weapon in _weapons)
-                weapon.AddDamage(-_additionalDamage);
+            Destroy(gameObject);
         }
     }
 }

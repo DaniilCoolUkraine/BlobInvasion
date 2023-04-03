@@ -2,7 +2,7 @@ using System;
 using BlobInvasion.Values;
 using UnityEngine;
 
-namespace BlobInvasion
+namespace BlobInvasion.ScriptableObjects
 {
     [CreateAssetMenu (fileName = "ScriptableObjectInt", menuName = "ScriptableObjects/ScriptableObjectInt")]
     public class ScriptableObjectInt : ScriptableObject

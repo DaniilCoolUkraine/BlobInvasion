@@ -1,20 +1,25 @@
 ﻿using System;
+using BlobInvasion.Collectable.Props.Bonuses;
 using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
+using BlobInvasion.Unlocker;
 using UnityEngine;
 
 namespace BlobInvasion.Player
 {
-    public class PlayerAttack : MonoBehaviour
+    public class PlayerAttack : MonoBehaviour, IPowerable, IUnlocker
     {
         public event Action<bool> OnAttack;
+        public event Action OnGoalReached;
 
         [SerializeField] private SphereCollider _attackZone;
-       
+
+        [SerializeField] private int _levelGoal = 30;
+        
         private Weapon _weapon;
 
         private int _enemyNearCounter = 0;
-        
+
         private bool _isAttacking;
         public bool IsAttacking
         {
@@ -26,6 +31,20 @@ namespace BlobInvasion.Player
             }
         }
         
+        private int _enemyKilled = 0;
+        private int EnemyKilled
+        {
+            get => _enemyKilled;
+            set
+            {
+                _enemyKilled = value;
+                if (_enemyKilled >= _levelGoal)
+                {
+                    OnGoalReached?.Invoke();
+                }
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             var damageable = other.GetComponent<IDamageable>();
@@ -35,10 +54,13 @@ namespace BlobInvasion.Player
                 return;
             }
             
-            damageable.OnDie += () => StopAttack();
+            damageable.OnHealthIsZero += () =>
+            {
+                StopAttack();
+                EnemyKilled += 1;
+            };
 
             IsAttacking = true;
-
             _enemyNearCounter++;
         }
         
@@ -54,6 +76,22 @@ namespace BlobInvasion.Player
             StopAttack();
         }
 
+        public void SetWeapon(Weapon weapon)
+        {
+            _weapon = weapon;
+            _attackZone.radius = _weapon.AttackZoneRadius;
+        }
+
+        public void ApplyPowerUp(params object[] param)
+        {
+            _weapon.ApplyDamageUp((int) param[0]);
+        }
+        
+        public void DoUnlock(GameObject unlockable)
+        {
+            SetWeapon(unlockable.GetComponent<Weapon>());
+        }
+        
         private void StopAttack()
         {
             _enemyNearCounter = (_enemyNearCounter - 1 < 0) ? 0 :  _enemyNearCounter - 1;
@@ -61,12 +99,6 @@ namespace BlobInvasion.Player
             {
                 IsAttacking = false;
             }
-        }
-
-        public void SetWeapon(Weapon weapon)
-        {
-            _weapon = weapon;
-            _attackZone.radius = _weapon.AttackZoneRadius;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace BlobInvasion.Enemies.Spawner
     public class EnemyWaveSpawner : MonoBehaviour
     {
         [SerializeField] private Transform _playerTransform;
-        [SerializeField] private EnemyMarket _enemyMarket;
+        [SerializeField] private EnemyMarketSO _enemyMarket;
 
         [Space(10)]
         

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BlobInvasion
+namespace BlobInvasion.Values
 {
     [System.Serializable]
     public class ValueFloat

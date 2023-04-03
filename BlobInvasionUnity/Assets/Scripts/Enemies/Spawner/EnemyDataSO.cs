@@ -2,7 +2,7 @@
 
 namespace BlobInvasion.Enemies.Spawner
 {
-    [CreateAssetMenu(fileName = "NewEnemyData", menuName = "EnemyData", order = 0)]
+    [CreateAssetMenu(fileName = "NewEnemyData", menuName = "ScriptableObjects/EnemyData", order = 0)]
     public class EnemyDataSO : ScriptableObject
     {
         [SerializeField] private GameObject _enemyPrefab;

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using BlobInvasion.Settings;
+using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
 namespace BlobInvasion.Collectable.Weapons
@@ -7,19 +8,18 @@ namespace BlobInvasion.Collectable.Weapons
     {
         [SerializeField] private Transform _parentBone;
         [SerializeField] private MultiParentConstraint _parentConstraint;
-
-        // todo replace with scriptable object, like enemies
-        [SerializeField] private CollectWeapon[] _weapons;
-
+        
+        [SerializeField] private PlayerSettingsSO _playerSettings;
+        
         private void Start()
         {
-            CreateWeapon();
+            CreateWeapon(_playerSettings.CurrentWeapon);
         }
-
-        public void CreateWeapon()
+        
+        public void CreateWeapon(Weapon weapon)
         {
-            CollectWeapon weapon = Instantiate(_weapons[Random.Range(0, _weapons.Length)], new Vector3(-6, 1, -6), Quaternion.identity);
-            weapon.Initialize(_parentBone, _parentConstraint);
+            CollectWeapon collectWeapon = Instantiate(weapon, _parentConstraint.transform.position, Quaternion.identity).GetComponent<CollectWeapon>();
+            collectWeapon.Initialize(_parentBone, _parentConstraint);
         }
     }
 }

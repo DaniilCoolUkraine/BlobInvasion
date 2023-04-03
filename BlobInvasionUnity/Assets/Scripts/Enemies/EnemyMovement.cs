@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace BlobInvasion.Enemies
@@ -21,10 +20,6 @@ namespace BlobInvasion.Enemies
             if (_player != null)
             {
                 _agent.SetDestination(_player.position);
-                // transform.position =
-                //     Vector3.MoveTowards(transform.position, _player.position, _speed * Time.deltaTime);
-                //
-                // transform.LookAt(_player);
             }
         }
         

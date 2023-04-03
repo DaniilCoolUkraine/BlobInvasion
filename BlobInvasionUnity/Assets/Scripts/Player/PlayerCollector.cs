@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using BlobInvasion.Collectable;
 using UnityEngine;
 
@@ -6,8 +6,8 @@ namespace BlobInvasion.Player
 {
     public class PlayerCollector : MonoBehaviour, ICollector
     {
-        private List<ICollectable> _collectables = new List<ICollectable>();
-
+        public event Action<GameObject> OnCollected;
+        
         private void OnCollisionEnter(Collision collision)
         {
             ICollectable collectable = collision.gameObject.GetComponent<ICollectable>();
@@ -15,13 +15,16 @@ namespace BlobInvasion.Player
             if (collectable is null)
                 return;
             
-            Collect(collectable);
+            Collect(collision.gameObject);
         }
 
-        public void Collect(ICollectable collectable)
+        public void Collect(GameObject collectableGameObject)
         {
+            ICollectable collectable = collectableGameObject.GetComponent<ICollectable>();
+            
             collectable.Collect(this.gameObject);
-            _collectables.Add(collectable);
+            
+            OnCollected?.Invoke(collectableGameObject);
         }
     }
 }

@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 namespace BlobInvasion.Damageable
 {
-    public class Health : MonoBehaviour, IDamageable
+    public abstract class Health : MonoBehaviour, IDamageable
     {
         [SerializeField] private HealthData _healthData;
 
@@ -18,7 +18,7 @@ namespace BlobInvasion.Damageable
             _currentHp = _healthData.MaxHp;
         }
 
-        public event Action OnDie;
+        public event Action OnHealthIsZero;
         public event Action<float, float> OnDamageTaken;
 
         public virtual void TaKeDamage(int damage)
@@ -32,7 +32,7 @@ namespace BlobInvasion.Damageable
 
         protected virtual void Die()
         {
-            OnDie?.Invoke();
+            OnHealthIsZero?.Invoke();
 
             SpawnParticles(_dieParticles);
                 
@@ -45,7 +45,7 @@ namespace BlobInvasion.Damageable
                 transform.position + Vector3.up, Quaternion.identity);
             particle.Play();
 
-            Destroy(particle.gameObject, particle.duration);
+            Destroy(particle.gameObject, particle.main.duration);
         }
     }
 }

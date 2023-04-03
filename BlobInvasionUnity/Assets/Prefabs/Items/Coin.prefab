@@ -128,4 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325726c5ff6749f392dfa437b3996d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collectParticles:
+  - {fileID: 19847330, guid: c8ded7e7fd6f5344a845fe65c2ea578d, type: 3}
   _coinData: {fileID: 11400000, guid: 19be5f00145834512ac8a5af765af371, type: 2}

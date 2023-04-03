@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
+using BlobInvasion.Collectable.Props.Bonuses;
 using UnityEngine;
 
 namespace BlobInvasion.Player
 {
-    public class MoveByPhysicsJoysticController : MonoBehaviour
+    public class MoveByPhysicsJoysticController : MonoBehaviour, IPowerable
     {
         public event Action<bool> OnPlayerMove;
 
@@ -37,6 +38,11 @@ namespace BlobInvasion.Player
              _joystick.OnInterract -= SetActive;
         }
 
+        public void ApplyPowerUp(params object[] param)
+        {
+            _speed += (int) param[0];
+        }
+        
         protected virtual void SetActive(bool isActive)
         {
             if (IsMove)

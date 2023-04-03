@@ -1,4 +1,4 @@
-using System;
+using BlobInvasion.ScriptableObjects;
 using TMPro;
 using UnityEngine;
 
@@ -27,7 +27,17 @@ namespace BlobInvasion.UI
 
         private void UpdateCoinsText(int value, int minValue, int maxValue)
         {
-            _coinsText.text = value.ToString();
+            _coinsText.text = Convert(value);
+        }
+
+        private string Convert(int value)
+        {
+            if (value >= 1000)
+            {
+                string stringVal = value.ToString();
+                return $"{stringVal[0]}.{stringVal[1]}K";
+            }
+            return value.ToString();
         }
     }
 }
