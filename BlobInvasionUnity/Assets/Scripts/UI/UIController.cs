@@ -1,5 +1,4 @@
-﻿using System;
-using BlobInvasion.Enemies;
+﻿using BlobInvasion.Enemies;
 using UnityEngine;
 
 namespace BlobInvasion.UI
@@ -7,7 +6,7 @@ namespace BlobInvasion.UI
     public class UIController : MonoBehaviour
     {
         [SerializeField] private BossController _boss;
-        [SerializeField] private PauseMenu _menu;
+        [SerializeField] private EndGameScreenEnabler _menu;
 
         private void OnEnable()
         {

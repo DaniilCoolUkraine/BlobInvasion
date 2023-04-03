@@ -1,5 +1,142 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &344761247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344761248}
+  - component: {fileID: 344761252}
+  - component: {fileID: 344761251}
+  - component: {fileID: 344761250}
+  - component: {fileID: 344761249}
+  m_Layer: 0
+  m_Name: PauseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &344761248
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344761247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6584854235909328949}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -40}
+  m_SizeDelta: {x: 50, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &344761252
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344761247}
+  m_CullTransparentMesh: 1
+--- !u!114 &344761251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344761247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bdd674017bb6b4807aa77daf5310b898, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &344761250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344761247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 344761251}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &344761249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344761247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d842cf58fa84114945c0fcae4043136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 344761250}
+  _pauseMenu: {fileID: 6584854235454364522}
+  _joystickCanvas: {fileID: 0}
 --- !u!1 &360797687460123513
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,6 +149,7 @@ GameObject:
   - component: {fileID: 1843744116683841489}
   - component: {fileID: 8872230182002996151}
   - component: {fileID: 4659016748817051231}
+  - component: {fileID: 1116801106}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -121,19 +259,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8872230182002996151}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1116801106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360797687460123513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 4659016748817051231}
+  _sceneName: 
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 1
 --- !u!1 &413585256561517887
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +423,7 @@ GameObject:
   - component: {fileID: 410341446181355035}
   - component: {fileID: 4499584659145832196}
   - component: {fileID: 6201242098740896425}
+  - component: {fileID: 331729288}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -390,19 +533,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4499584659145832196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &331729288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571139505644849969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6201242098740896425}
+  _sceneName: 
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 1
 --- !u!1 &1405113964275018343
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +777,7 @@ GameObject:
   - component: {fileID: 1483264370984565910}
   - component: {fileID: 7106685276026879591}
   - component: {fileID: 2905363123726648910}
+  - component: {fileID: 635732764}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -739,19 +887,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7106685276026879591}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &635732764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2260680790100318483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 2905363123726648910}
+  _sceneName: MainMenuScene
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 0
 --- !u!1 &2337033274563228397
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1130,7 @@ GameObject:
   - component: {fileID: 3393011530223523626}
   - component: {fileID: 8673083306655720219}
   - component: {fileID: 6678815696218540421}
+  - component: {fileID: 1774017934}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -1087,19 +1240,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8673083306655720219}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1774017934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947015286548927313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6678815696218540421}
+  _sceneName: 
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 0
 --- !u!1 &3537650408517189710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +2076,7 @@ RectTransform:
   - {fileID: 6584854236261990244}
   - {fileID: 5090512813232456246}
   - {fileID: 1844955765947013736}
+  - {fileID: 344761248}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2458,6 +2616,7 @@ GameObject:
   - component: {fileID: 6584854236789952708}
   - component: {fileID: 6584854236789952709}
   - component: {fileID: 6584854236789952710}
+  - component: {fileID: 7510605385752739611}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -2567,19 +2726,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6584854236789952709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &7510605385752739611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584854236789952760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6584854236789952710}
+  _sceneName: MainMenuScene
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 0
 --- !u!1 &6584854236897018125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2755,7 @@ GameObject:
   - component: {fileID: 6584854236897018121}
   - component: {fileID: 6584854236897018122}
   - component: {fileID: 6584854236897018123}
+  - component: {fileID: 5741771379092559881}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -2701,19 +2865,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6584854236897018122}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &5741771379092559881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584854236897018125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6584854236897018123}
+  _sceneName: 
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 1
 --- !u!1 &6584854237437321392
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2894,7 @@ GameObject:
   - component: {fileID: 6584854237437321404}
   - component: {fileID: 6584854237437321405}
   - component: {fileID: 6584854237437321406}
+  - component: {fileID: 2113739355}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -2835,19 +3004,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6584854237437321405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &2113739355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584854237437321392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d842cf58fa84114945c0fcae4043136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6584854237437321406}
+  _pauseMenu: {fileID: 6584854235454364522}
+  _joystickCanvas: {fileID: 0}
 --- !u!1 &6584854237445094438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,6 +3108,7 @@ GameObject:
   - component: {fileID: 4734461976690743399}
   - component: {fileID: 2556711390676319148}
   - component: {fileID: 6494261509483939500}
+  - component: {fileID: 766270781}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -3045,19 +3218,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2556711390676319148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &766270781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6865213516059261084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 6494261509483939500}
+  _sceneName: MainMenuScene
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 0
 --- !u!1 &8822894733074485549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,6 +3517,7 @@ GameObject:
   - component: {fileID: 6265924168736718332}
   - component: {fileID: 2136213727739500936}
   - component: {fileID: 5221022418356138261}
+  - component: {fileID: 1015713180}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -3449,16 +3627,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2136213727739500936}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BlobInvasion.UI.PauseMenu, Assembly-CSharp
-        m_MethodName: Restart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1015713180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219894224239423798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 5221022418356138261}
+  _sceneName: 
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _isQuitButton: 0

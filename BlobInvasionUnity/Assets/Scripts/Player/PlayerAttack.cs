@@ -13,7 +13,9 @@ namespace BlobInvasion.Player
         public event Action OnGoalReached;
 
         [SerializeField] private SphereCollider _attackZone;
-       
+
+        [SerializeField] private int _levelGoal = 30;
+        
         private Weapon _weapon;
 
         private int _enemyNearCounter = 0;
@@ -36,7 +38,7 @@ namespace BlobInvasion.Player
             set
             {
                 _enemyKilled = value;
-                if (_enemyKilled >= 30)
+                if (_enemyKilled >= _levelGoal)
                 {
                     OnGoalReached?.Invoke();
                 }

@@ -5,16 +5,13 @@ using UnityEngine.SceneManagement;
 
 namespace BlobInvasion.UI
 {
-    public class PauseMenu : MonoBehaviour
+    public class EndGameScreenEnabler : MonoBehaviour
     {
         public event Action<bool> OnPaused;
+        public bool IsPaused { get; protected set; } = false;
         
-        public bool IsPaused { get; private set; } = false;
-
         [SerializeField] private ScriptableObjectEvent _onPlayerDieEvent;
-        
-        [SerializeField] private GameObject _pauseMenu;
-        
+
         [SerializeField] private GameObject _looseScreen;
         [SerializeField] private GameObject _winScreen;
         
@@ -49,42 +46,6 @@ namespace BlobInvasion.UI
             
             _winScreen.SetActive(true);
             _joystickCanvas.SetActive(false);
-        }
-        
-        public void Pause()
-        {
-            IsPaused = true;
-            OnPaused?.Invoke(true);
-            Time.timeScale = 0f;
-            
-            _pauseMenu.SetActive(true);
-            _joystickCanvas.SetActive(false);
-        }
-        
-        public void Resume()
-        {
-            IsPaused = false;
-            OnPaused?.Invoke(false);
-            Time.timeScale = 1f;
-            
-            _pauseMenu.SetActive(false);
-            _joystickCanvas.SetActive(true);
-        }
-
-        public void Quit()
-        {
-            Application.Quit();
-        }
-
-        public void LoadMenu()
-        {
-            string sceneName = "MainMenuScene";
-            SceneManager.LoadScene(sceneName);
-        }
-
-        public void Restart()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

@@ -1140,6 +1140,7 @@ GameObject:
   - component: {fileID: 451848834}
   - component: {fileID: 451848833}
   - component: {fileID: 451848832}
+  - component: {fileID: 451848835}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1211,19 +1212,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 451848833}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 921642363}
-        m_TargetAssemblyTypeName: BlobInvasion.Shop.LevelsManager, Assembly-CSharp
-        m_MethodName: LoadCurrentScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &451848833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,6 +1251,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451848830}
   m_CullTransparentMesh: 1
+--- !u!114 &451848835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451848830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: 
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _button: {fileID: 451848832}
 --- !u!4 &536596685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7864257595707884138, guid: 3efb34a3fc031cb479aa1c637210ae8c, type: 3}
@@ -1803,7 +1807,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1668513393}
   - {fileID: 921642362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1954,17 +1957,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2430172588750760805, guid: 6a01625f37a6bfe45b3f746d11331a04, type: 3}
   m_PrefabInstance: {fileID: 855231242}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &898605918 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3729824718623764721, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
-  m_PrefabInstance: {fileID: 1808396938}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8935e03361a14ec4b8edc872f76bc822, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &912654221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,6 +1969,7 @@ GameObject:
   - component: {fileID: 912654225}
   - component: {fileID: 912654224}
   - component: {fileID: 912654223}
+  - component: {fileID: 912654226}
   m_Layer: 5
   m_Name: ShopButton
   m_TagString: Untagged
@@ -2048,19 +2041,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912654224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 921642363}
-        m_TargetAssemblyTypeName: BlobInvasion.Shop.LevelsManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ShopScene
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &912654224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,6 +2080,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912654221}
   m_CullTransparentMesh: 1
+--- !u!114 &912654226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912654221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a22643780449ef88ab56074671557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: ShopScene
+  _levelSettings: {fileID: 11400000, guid: ef46a69d470018e40b4f6b5da9d1a627, type: 2}
+  _button: {fileID: 912654223}
 --- !u!1 &920971655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 844340006}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &921642363
 MonoBehaviour:
@@ -2599,6 +2595,10 @@ PrefabInstance:
     - target: {fileID: 10894776, guid: 402cfc0892ef54047b74d53d5a560238, type: 3}
       propertyPath: m_Range
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 10894776, guid: 402cfc0892ef54047b74d53d5a560238, type: 3}
+      propertyPath: m_Intensity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 10894776, guid: 402cfc0892ef54047b74d53d5a560238, type: 3}
       propertyPath: m_Lightmapping
@@ -3309,52 +3309,6 @@ Transform:
   m_Father: {fileID: 150828903}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1668513391
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1668513393}
-  - component: {fileID: 1668513392}
-  m_Layer: 0
-  m_Name: WeaponManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1668513392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668513391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 093db831525643b2876494306e526487, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parentBone: {fileID: 2146896995}
-  _parentConstraint: {fileID: 898605918}
---- !u!4 &1668513393
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668513391}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 844340006}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680754861
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,7 +3552,7 @@ PrefabInstance:
     - target: {fileID: 3729824718455058182, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
       propertyPath: _weaponManager
       value: 
-      objectReference: {fileID: 1668513392}
+      objectReference: {fileID: 0}
     - target: {fileID: 3729824718455058185, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3650,6 +3604,10 @@ PrefabInstance:
     - target: {fileID: 3729824718455058189, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729824718599055223, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4540637777025238212, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4137,11 +4095,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8459904658277782511, guid: ca894a40b7eca9148817627584277a04, type: 3}
   m_PrefabInstance: {fileID: 2057193953}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2146896995 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3729824717974186158, guid: c3adbbbf1e80beb498809f26d089671c, type: 3}
-  m_PrefabInstance: {fileID: 1808396938}
-  m_PrefabAsset: {fileID: 0}
 --- !u!108 &7630036680431170507
 Light:
   m_ObjectHideFlags: 0
@@ -4154,7 +4107,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.7216981, b: 0.7391602, a: 1}
-  m_Intensity: 3
+  m_Intensity: 6
   m_Range: 10
   m_SpotAngle: 37.76869
   m_InnerSpotAngle: 21.80208

@@ -1,4 +1,5 @@
 ﻿using System;
+using BlobInvasion.ScriptableObjects;
 using BlobInvasion.Settings;
 using UnityEngine;
 using UnityEngine.SceneManagement;

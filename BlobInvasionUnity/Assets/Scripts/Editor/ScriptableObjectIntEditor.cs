@@ -1,3 +1,4 @@
+using BlobInvasion.ScriptableObjects;
 using UnityEditor;
 using UnityEngine;
 

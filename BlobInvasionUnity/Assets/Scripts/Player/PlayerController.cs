@@ -1,9 +1,7 @@
 ﻿using BlobInvasion.Collectable.Props.Bonuses;
-using BlobInvasion.Collectable.Weapons;
 using BlobInvasion.Damageable;
 using BlobInvasion.Enemies.Spawner;
 using BlobInvasion.ScriptableObjects;
-using BlobInvasion.Settings;
 using UnityEngine;
 
 namespace BlobInvasion.Player
@@ -25,10 +23,6 @@ namespace BlobInvasion.Player
         [Header("Events")] 
         [SerializeField] private ScriptableObjectEvent _playerDieEvent;
         
-        [Header("Enemies")]
-        
-        [SerializeField] private EnemyWaveSpawner[] _enemyWaveSpawners;
-
         public PlayerAttack PlayerAttack => _playerAttack;
         public MoveByPhysicsJoysticController PlayerMovement => _playerMovement;
         public PlayerHealth PlayerHealth => _playerHealth;
@@ -41,8 +35,6 @@ namespace BlobInvasion.Player
             _playerCollector.OnCollected += OnCollected;
 
             _playerHealth.OnHealthIsZero += OnHealthIsZero;
-
-            _playerAttack.OnGoalReached += OnGoalReached;
         }
 
         private void OnDisable()
@@ -68,14 +60,6 @@ namespace BlobInvasion.Player
         private void OnHealthIsZero()
         {
             _playerDieEvent.Invoke();
-        }
-        
-        private void OnGoalReached()
-        {
-            foreach (EnemyWaveSpawner spawner in _enemyWaveSpawners)
-            {
-                spawner.gameObject.SetActive(!spawner.gameObject.activeSelf);
-            }
         }
     }
 }
