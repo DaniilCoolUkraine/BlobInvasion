@@ -1,17 +1,17 @@
-﻿using System;
-using BlobInvasion.Damageable;
+﻿using BlobInvasion.Damageable;
+using BlobInvasion.ScriptableObjects;
 using UnityEngine;
 
 namespace BlobInvasion.Enemies
 {
     public class BossController : MonoBehaviour
     {
-        public event Action OnBossKilled;
-        
         [SerializeField] private BossTriggerDetector _triggerDetector;
         [SerializeField] private BossAnimationController _animationController;
 
         [SerializeField] private BossAttack _bossAttack;
+        
+        [SerializeField] private ScriptableObjectEvent _onBossKilledEvent;
 
         private void OnEnable()
         {
@@ -25,7 +25,7 @@ namespace BlobInvasion.Enemies
 
         private void OnDestroy()
         {
-            OnBossKilled?.Invoke();
+            _onBossKilledEvent.Invoke();
         }
 
         private void OnTriggered(bool isTriggered, IDamageable damageable)

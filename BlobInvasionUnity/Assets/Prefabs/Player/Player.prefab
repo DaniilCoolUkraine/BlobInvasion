@@ -168,7 +168,6 @@ MonoBehaviour:
   _playerHealth: {fileID: 827658069359843458}
   _playerCollector: {fileID: 3729824718455058204}
   _playerDieEvent: {fileID: 11400000, guid: ede1da11fc6c51d43b64dc9ce2e619b2, type: 2}
-  _enemyWaveSpawners: []
 --- !u!114 &3729824718455058181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackZone: {fileID: 3729824718599055218}
+  _levelGoal: 30
 --- !u!1 &3729824718623764727
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +957,10 @@ PrefabInstance:
       propertyPath: _parentBone
       value: 
       objectReference: {fileID: 3729824717974186158}
+    - target: {fileID: 7394022293064294790, guid: 1170bc38e5b7f3b498a1c84abdf3604b, type: 3}
+      propertyPath: _defaultWeapon
+      value: 
+      objectReference: {fileID: 5313519925106872080, guid: 7bd439ed689ae4948b969bd9242167d3, type: 3}
     - target: {fileID: 7394022293064294790, guid: 1170bc38e5b7f3b498a1c84abdf3604b, type: 3}
       propertyPath: _parentConstraint
       value: 

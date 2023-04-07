@@ -11,6 +11,8 @@ namespace BlobInvasion.Collectable.Weapons
         
         [SerializeField] private PlayerSettingsSO _playerSettings;
         
+        [SerializeField] private Weapon _defaultWeapon;
+        
         private void Start()
         {
             CreateWeapon(_playerSettings.CurrentWeapon);
@@ -18,7 +20,17 @@ namespace BlobInvasion.Collectable.Weapons
         
         public void CreateWeapon(Weapon weapon)
         {
-            CollectWeapon collectWeapon = Instantiate(weapon, _parentConstraint.transform.position, Quaternion.identity).GetComponent<CollectWeapon>();
+            CollectWeapon collectWeapon;
+            
+            if (weapon != null)
+            {
+                collectWeapon = Instantiate(weapon, _parentConstraint.transform.position, Quaternion.identity).GetComponent<CollectWeapon>();
+            }
+            else
+            {
+                collectWeapon = Instantiate(_defaultWeapon, _parentConstraint.transform.position, Quaternion.identity).GetComponent<CollectWeapon>();
+            }
+            
             collectWeapon.Initialize(_parentBone, _parentConstraint);
         }
     }

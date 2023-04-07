@@ -1,7 +1,6 @@
 using System;
 using BlobInvasion.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace BlobInvasion.UI
 {
@@ -11,6 +10,7 @@ namespace BlobInvasion.UI
         public bool IsPaused { get; protected set; } = false;
         
         [SerializeField] private ScriptableObjectEvent _onPlayerDieEvent;
+        [SerializeField] private ScriptableObjectEvent _onBossKilledEvent;
 
         [SerializeField] private GameObject _looseScreen;
         [SerializeField] private GameObject _winScreen;
@@ -20,15 +20,18 @@ namespace BlobInvasion.UI
         private void OnEnable()
         {
             _onPlayerDieEvent.OnInvoked += EnableLooseScreen;
+            _onBossKilledEvent.OnInvoked += EnableWinScreen;
         }
 
         private void OnDisable()
         {
             _onPlayerDieEvent.OnInvoked -= EnableLooseScreen;
+            _onBossKilledEvent.OnInvoked -= EnableWinScreen;
+
             Time.timeScale = 1f;
         }
 
-        public void EnableLooseScreen()
+        private void EnableLooseScreen()
         {
             IsPaused = true;
             OnPaused?.Invoke(true);
@@ -38,7 +41,7 @@ namespace BlobInvasion.UI
             _joystickCanvas.SetActive(false);
         }
         
-        public void EnableWinScreen()
+        private void EnableWinScreen()
         {
             IsPaused = true;
             OnPaused?.Invoke(true);

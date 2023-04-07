@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 860675241861866178}
   - component: {fileID: 860675241861866181}
-  - component: {fileID: 6312191016084098849}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -46,21 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _onPlayerDieEvent: {fileID: 11400000, guid: ede1da11fc6c51d43b64dc9ce2e619b2, type: 2}
-  _pauseMenu: {fileID: 0}
+  _onBossKilledEvent: {fileID: 11400000, guid: 79d8522c4e4ca7043b1f90440075c476, type: 2}
   _looseScreen: {fileID: 0}
   _winScreen: {fileID: 0}
   _joystickCanvas: {fileID: 0}
---- !u!114 &6312191016084098849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860675241861866179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24436fa32a0f40f5b9260f66949b3429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _boss: {fileID: 1831928114964429594, guid: 98d64f2968fd1334f9614db9be7256f9, type: 3}
-  _menu: {fileID: 860675241861866181}
