@@ -1752,11 +1752,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6584854235909328949, guid: 9e2eb9d15088bc54ea7c7faa29c195f3, type: 3}
   m_PrefabInstance: {fileID: 445196004}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &445196006 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6584854235454364522, guid: 9e2eb9d15088bc54ea7c7faa29c195f3, type: 3}
-  m_PrefabInstance: {fileID: 445196004}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &445196007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4422912133671031007, guid: 9e2eb9d15088bc54ea7c7faa29c195f3, type: 3}
@@ -2735,7 +2730,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059044540}
-  m_LocalRotation: {x: 0.3500453, y: -0.000000022793982, z: 0.000000008517826, w: 0.93673277}
+  m_LocalRotation: {x: 0.3500453, y: 0.000000022793984, z: -0.000000008517826, w: 0.93673277}
   m_LocalPosition: {x: -8.31, y: 14.559999, z: -9.940001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4342,7 +4337,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661454904}
-  m_LocalRotation: {x: 0.3500453, y: -0.000000022793982, z: 0.000000008517826, w: 0.93673277}
+  m_LocalRotation: {x: 0.3500453, y: 0.000000022793984, z: -0.000000008517826, w: 0.93673277}
   m_LocalPosition: {x: -8.31, y: 14.559999, z: -9.940001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5560,10 +5555,6 @@ PrefabInstance:
       value: UIManager
       objectReference: {fileID: 0}
     - target: {fileID: 860675241861866181, guid: cefd600336467394f9118a9f562c5266, type: 3}
-      propertyPath: _pauseMenu
-      value: 
-      objectReference: {fileID: 445196006}
-    - target: {fileID: 860675241861866181, guid: cefd600336467394f9118a9f562c5266, type: 3}
       propertyPath: _winScreen
       value: 
       objectReference: {fileID: 445196008}
@@ -5575,7 +5566,12 @@ PrefabInstance:
       propertyPath: _joystickCanvas
       value: 
       objectReference: {fileID: 2062348636}
-    m_RemovedComponents: []
+    - target: {fileID: 860675241861866181, guid: cefd600336467394f9118a9f562c5266, type: 3}
+      propertyPath: _onBossKilledEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 79d8522c4e4ca7043b1f90440075c476, type: 2}
+    m_RemovedComponents:
+    - {fileID: 6312191016084098849, guid: cefd600336467394f9118a9f562c5266, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cefd600336467394f9118a9f562c5266, type: 3}
 --- !u!4 &3209847673605703131 stripped
 Transform:

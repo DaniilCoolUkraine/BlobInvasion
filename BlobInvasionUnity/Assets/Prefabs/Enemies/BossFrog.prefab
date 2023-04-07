@@ -98,6 +98,7 @@ MonoBehaviour:
   _triggerDetector: {fileID: 452094734976956834}
   _animationController: {fileID: 6225336193197681907}
   _bossAttack: {fileID: 9004130948726003700}
+  _onBossKilledEvent: {fileID: 11400000, guid: 79d8522c4e4ca7043b1f90440075c476, type: 2}
 --- !u!114 &6225336193197681907
 MonoBehaviour:
   m_ObjectHideFlags: 0
